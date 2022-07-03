@@ -1,0 +1,91 @@
+<script>
+    // 카드의 합이 21점 또는 21에 가장 가까운것이 승리.
+    // 초과시 패배
+    // 에이스는 1점 또는 11점 모두 가능 유리한쪽으로
+    // 딜러와 플레이어 모두 처음 2장을 받는다
+    // 딜러는 16점 이하일 경우 무조건 카드 추가
+    // 딜러의 첫번째 패는 공개
+    // 플레이어는 원하는대로 추가 혹은 스테이 가능
+    // 처음 카드가 에이스와 k,q,j 이면 블랙잭으로 배팅금의 1.5배
+
+    let decks=[];
+    let dealer=[];
+    let player=[];
+    let myMoney = 100
+    let enterMoney = 0;
+    let playerScore;
+    let dealerScore;
+
+
+    for(i=0;i<11;i++){
+        decks[i]=Math.floor((Math.random()*11)+1);
+        for(j=1;j<i;j++){
+            if(decks[j]==decks[i]){
+                i--;
+            }
+        }
+    }
+    decks.sort(function(a,b){return a-b;});
+    console.log(decks);
+
+    enterMoney = Number(prompt("얼마를 배팅하시겠습니까?"));
+
+    for(let i=0;i<2;i++){
+        player[i]= decks[Math.floor(Math.random()*12)];
+        dealer[i] = decks[Math.floor(Math.random()*12)];
+    }
+    playerScore = player[0]+player[1];
+    dealerScore = dealer[0]+dealer[1];
+
+    console.log("내 카드 : "+player);
+    console.log("딜러 카드 : "+dealer[0]);
+    console.log("내 점수 : "+playerScore);
+
+    if(playerScore==21){
+        myMoney += (enterMoney*2);
+        console.log("블랙잭!");
+        console.log("배팅금액 "+enterMoney+"원의 1.5배 획득!");
+        console.log("소지금 : "+myMoney);
+    }else{
+        let userYn= confirm("카드를 더 뽑으시겠습니까?");
+        if(dealerScore<17){
+            dealer[2] = decks[Math.floor(Math.random()*12)];
+            dealerScore += dealer[2];
+        }
+        if(userYn==true){
+            player[2] = decks[Math.floor(Math.random()*12)];
+            playerScore += player[2];
+            if(playerScore>21){
+                console.log("3번째 카드"+player[2])
+                console.log("내 점수"+player[2])
+                console.log("패배!")
+            }
+        }
+
+
+    }
+    
+    
+
+
+    //     if((player[0]==decks[0])&&(player[0]==decks[10])
+        
+        
+    //     ){
+    //         if()
+    //         // 블랙잭!
+    //         myMoney += (enterMoney*2)
+    //     }else{
+    //         let userYn2= confirm("카드를 더 받으시겠습니까?");
+    //         if(userYn2==true){
+    //             //랜덤카드 하나 더 추가
+    //         }
+
+    //     }
+
+    // }
+
+
+    
+
+</script>

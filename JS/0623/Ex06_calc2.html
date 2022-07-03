@@ -1,0 +1,43 @@
+<script charset="utf-8">
+    // 프롬포트 숫자 3개 받기( 배열 숫자 기호 숫자)
+    // 3개 받은 숫자로
+    // 결과 출력
+
+    // let arr = start();
+    // let sum = calc(arr);
+    // console.log(sum);
+
+    console.log(start());
+
+    function start(){
+        var arr= [];
+        for(let i=0;i<3;i++){
+            if(i==1){
+                arr[i]=prompt("기호를 입력하세요");
+            }else{
+                arr[i]=Number(prompt(i+"번째 숫자를 입력하세요"));
+            }
+        }
+        return calc(arr);
+    }
+   
+    function calc(arr){
+        switch(arr[1]){
+            case "+":
+                return arr[0]+arr[2];
+                break;
+            case "-":
+                return arr[0]-arr[2];
+                break;
+            case "*":
+                return arr[0]*arr[2];
+                break;
+            case "/":
+                return arr[0]/arr[2];
+                break;
+        }
+    }
+
+
+
+</script>

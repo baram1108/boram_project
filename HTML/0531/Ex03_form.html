@@ -1,0 +1,82 @@
+<!--
+
+    HTML : TAG 를 통해서 웹페이지의 구조를 만듦
+    
+    World Wide web : 인터넷에 연결된 사람들끼리 서로 정보를 공유할 수 있는 공간
+        *WEB : 인터넷환경, 공간
+    
+        1. 웹 서버 : 사용자가 어디론가 접근하는 목적지 (*가게, 슈퍼)
+        - 사용자의 요청을 항상 받아주며, 항상 실행되어있어야 한다.
+        2. 웹 브라우저 : 사용자가 서버로 정보를 보낼 때 쓰는 프로그램 (* 탈것, 이동수단)
+        - 서로 협의가 된 프로그램으로 서버에 접근
+
+    서버와 클라이언트
+
+    서버 : 항상 실행되어야하고 클라이언트가 요청한 것을 응답해 주는 곳
+    클라이언트 : 사용자, 서버에게 요청을 하는 주체, 응답을 받는 주체
+    
+    클라이언트들이 서벌 전달하기 위한 포장지 <form> 태그
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form> : input 태그들의 담긴 데이터를 서버로 전달을 돕는 포장 태그
+        필수 속성 method, action
+        method : 서버와의 통신 약속을 정하는 속성, 데이터 전달 방식을 정하는 속성
+        action : 전송할때 이동해야하는 페이지 명 <a href>와 같은 기능
+        
+        입력이 끝나면 끝났다는 사건이 필요합니다.
+        사건을 만들기 위해서 보통 버튼을 사용
+
+        form 태그와 submit 기능을 통해서 서버에게 데이터를 전송
+        <input type="submit"> 태그를 통해서 submit 기능이 있는 버튼을 생성
+    -->
+
+
+    No-Form <input type="text" placeholder="아이디"><br/>
+    <input type="button" value="일반버튼"/>
+    <input type="submit" value="제출버튼"/>
+    <input type="reset" value="초기화버튼"/>
+    <hr/><br/>
+
+   
+    <form id="myform" action="#">
+
+        form : <input type="text" placeholder="아이디"><br/>
+        메일1 : <input type="text" id="email"> <br/>
+        메일2 : <input type="email"/> <br/>
+        
+
+        <input type="button" value="일반버튼"/>
+        <input type="submit" value="제출버튼"/>
+        <input type="reset" value="초기화버튼"/>
+
+        <button> 제출 </button> <!-- 어떤버튼일까 ? -->
+        <button type="button"> 제출 </button>
+        <button type="submit"> 제출 </button>
+    </form>
+
+<script>
+    document.querySelector("#myform").addEventListener("submit", function(e){ 
+
+var email = document.querySelector("#email");
+var isValidate = false;
+var regexp =/[a-z]+[a-z0-9]*\.?[a-z0-9]*@[a-z0-9]+\.?[a-z0-9]*/i;
+
+if(!regexp.test(email.value)){
+    alert("이메일 형식이 다릅니다.");
+}
+
+});
+</script>
+
+<hr/>
+
+/

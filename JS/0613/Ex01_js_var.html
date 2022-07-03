@@ -1,0 +1,142 @@
+<script>
+    // let n1 = 1234;
+    // let n2 = 4567;
+    // let name = "김보람"
+    // let s1 = "javascipt"
+    // let b1 = true
+
+    // document.write(typeof n1 + "<br>")
+    // document.write(typeof s1 + "<br>")
+    // document.write(typeof b1 + "<br>")
+
+    // document.write(name + " 은 " + typeof name + "입니다.<br>")
+    // console.log(name + " 은 " + typeof name + "입니다.<br>")
+
+    // 변수 규칙
+    // 변수 : 데이터(값)를 저장하는 공강, 변하는 값(데이터)
+    //        데이터를 임시적으로 저장하는 공간, 한번에 한가지의 값만 존재
+    //        데이터가 있는 변수에 또 다른 데이터를 입력하면 ?
+    //        > 기존데이터는 사라지고 새로운 데이터로 저장 (*재할당)
+    //        재선언 : 같은 변수이름으로 공간을 만드는 해우이
+    // 선언과 대입/ 선언과 초기화/ 선언과 할당
+
+    // var / let / const   : 재선언과 재할당의 차이 + scope
+
+    // 변수이름은 규칙 존재
+    // 1. 문자(a-z, A-Z), 밑줄(_), 달러($) 로 시작하고
+    //    두번째자리부터는 숫자도 가능, 그외 문자는 사용 불가능, 한글도 가능하나 사용X
+    // 2. 대소문자를 정확하게 구분
+    //    myName / myname : 다른변수명
+    // 3. 예약어(키워드)로는 변수명을 선언 불가능
+    //    - javascript가 미리 선점한 단어
+    //      var / let / const / if ... Error < 예약어일수있음
+
+    // * 참고 : 클린코드 > "변수와 함수명은 그 용도를 알기 쉽게 자세히 명명해라"
+
+    // 권장사항
+    // 누구는 변수를 대문자 / 누구는 변수를 소문자 ...
+    // 변수나 함수명을 작성하는 표기법
+    // : camelCase, pascalCase, underscore_case, kebab-case
+    // > camelCase : 여러단어로 이루어진 단어일 경우 첫단어는 모두 소문자
+    //               다음단어는 첫문자만 대문자 (낙타표기법)
+    // MyName , MyClassname
+    // > PascalCasse : 첫문자를 대문자로 작성
+    // myName, myClassName
+    // > underscore_case : 단어사이를 _(언더바)로 연결
+    //                     스네이크표기법, 뱀표기법
+    // my_name, my_clss_name
+    // > kebab-case : 단어사이를 -(하이픈)으로 연결
+    //                트레인 표기법, 기차표기법
+    // my-name, my-class-name
+
+    // typeof 변수
+    // typeof 값
+
+    var varName ; // 변수의 선언 : undefined
+    varName = 10; // 변수의 초기화(대입, 할당)
+    // 한번에
+    var varName = 10; // 선언과 동시에 초기화
+
+    // 변수를 많이 만들고싶다 ,(쉼표)로 한번에 할당
+    var yy, mm, dd;
+    var yy = 2022, mm = 6, dd = 13;
+    yy = 2022, mm = 11, dd = 19;
+
+    // 형변환 : 자료형을 변환하는 방법
+    // 정말 많이 에러를 발생시키는 원인 중 하나인 부분
+
+    // javascipt : 자동으로 타입을 할당
+    var i = 1; // 자동으로 숫자형으로 할당
+    var j = "1"; // 자동으로 문자열형으로 할당
+
+    console.log(i+j); // 숫자 + 문자 : 11
+
+    // + 제외한 사칙연산일 경우 : 숫자만 들어있는 문자일 경우 : 자동 숫자 변환
+    // 묵시적 타입 변화 (자동형변환)
+    console.log(i*j); // 숫자 + 문자 > 변환 > 1*1 : 1
+    console.log(i-j); // 숫자 + 문자 > 변환 > 1-1 : 0
+    console.log(i* "문자"); // NaN : Not a Number : 숫자가 아니다 (Error)
+
+    // 명시적 타입 변환 (형변환을 직접 정의)
+    // Number()     : 숫자로만 작성된 문자를 숫자의 자료형으로 변경
+    // String()
+    // Boolean()
+    // Object()
+    // parseInt()
+    // parseFloat()
+    // yyyy-mm-dd yyyy년mm월dd일 yyyy.mm.dd
+
+    console.log(typeof "10");
+    console.log(Number("10")) // 형변환 : 문자 > 숫자로 형변환
+    console.log(typeof Number("10"));
+    console.log(10+"10");
+    console.log(10+Number("10"));
+    console.log(10+Number("ten10")); // 숫자로 바꿀 수 있는것만 바꿔줌
+
+    console.log(Number.parseInt("10"));
+    console.log(Number.parseFloat("10"));
+
+    console.log(Number.parseInt("10.23"));  // 10   : 정수형 (소수점X)
+    console.log(Number.parseFloat("10.23"));// 10.23: 실수형 (소수점O)
+
+    //예외
+
+    console.log(Number("10문자열"));  // 간단하게 하는 방법 : 예외처리불가
+    console.log(Number.parseInt("10문자열")); // 처음 글자가 숫자일 경우 변환
+    console.log(Number.parseFloat("10문자열")); 
+    console.log(Number.parseInt("문자열10")); // NaN
+    console.log(Number.parseFloat("문자열10"));
+    console.log("--------------------");
+
+    /* 숫자 > 문자 */
+    console.log("숫자 > 문자");
+    //String()
+    console.log(String(10));
+    console.log(typeof String(10));
+    console.log(10 + String(10)); // 20 > 1010
+
+    // boolean : 참(true,1) 거짓(false,0s)
+    console.log("boolean");
+    console.log(true);
+    console.log(String(true));
+    console.log(Number(true)); // 1 : true 
+
+    var i = 0;
+    console.log("변수 형변환");
+    console.log(i);
+    console.log(typeof i);
+    console.log(typeof String(i));
+    console.log(typeof Boolean(i));
+    console.log(Boolean(i));
+
+    var s = "true";
+    console.log("문자열 true");
+    console.log(s);
+    console.log(Number(s));  //숫자가 아닌데?
+    console.log(Boolean(s)); //문제없음
+
+    // 문자열"true"를 불리안으로 형변환하여 숫자 1로 변경
+    console.log(Number(Boolean(s)))
+
+
+</script>

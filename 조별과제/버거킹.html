@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb( 244,235,220);
+        }
+        header div{
+            width: auto;
+            height: 100px;
+            background-color: rgb(245,130,49);
+            text-align: center;
+        }
+        header div img{
+            margin: auto;
+        }
+
+        .menu_set div{
+            position: relative;
+            border-radius: 10px;
+            font-weight: bolder;
+            font-size: 18px;
+            width: 410px;
+            height: 50px;
+            padding: 20px 70px;
+            color: white;
+            margin: 20px;
+            overflow:visible          
+        }
+
+        .menu1 {
+            background-color: rgb(213,44,39);
+            text-align: right;
+        }
+        .menu2 {
+            background-color: green;
+            text-align: left;
+        }
+        .menu3 {
+            background-color: rgb(87,28,14);
+            text-align: right;
+        }
+
+        .menu_img{
+            width: 170px;
+            height: 170px;
+            margin: 0;
+            float: left;
+            position: absolute;
+            top: -40px;
+            left: 30px;
+        }
+        .menu_img:nth-child(2){
+            left: 350px;
+        }
+        /* .menu_img ~ span{
+
+        } */
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/logo.png" alt="#">
+        </div>
+    </header>
+    <section>
+        <div class="menu_set">
+            <div class="menu1">
+                <img class="menu_img" src="img/스테커2와퍼.png" alt="#">
+                <span>불고기와퍼<br>9200원</span>
+            </div>
+            <div class="menu2">
+                <span>콰트로치즈와퍼<br>7200원</span>
+                <img class="menu_img" src="img/콰트로치즈버거.png" alt="#">
+            </div>
+            <div class="menu3">
+                <img class="menu_img" src="img/통새우와퍼X.png" alt="#">
+                <span>통새우와퍼X<br>8000원</span>
+            </div>
+        </div>
+        
+    </section>
+
+    
+</body>
+</html>

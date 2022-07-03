@@ -1,0 +1,71 @@
+<script>
+    // myMoney = 내가 가진돈 (나증ㅇ[ 뱐걍])
+    let myMoney =1;
+
+    // enterMoney = 게임 참가비 (나중에 사용자에게 입력받도록 변경)
+    let enterMoney = 5;
+
+    // 1. 게임의 참가를 묻기? <y/n>
+    let userYn = confirm("게임을 시작하시겠습니까?");
+
+    // 2. 사용자의 가진돈을 보고 5원보다 높으면 진생 / 낮으면 돈없다고 실패
+    // 2-1. 대출하듯이 돈여부 보고 얼마 더 빌릴 수 있도록 해주세요
+
+    // 3. 컴퓨터가 주사위를 5번 굴립니다.(중복가능,정렬)
+    // 4. 사용자가 주사위를 맞출것
+    // 5. 맞춘 주사위 값 *2 투자금 돌려주기
+
+    // 사용자가 게임을 하면 참가비를 내야하고,
+    // 5원이 없으면 시작실패 or 대출
+
+    // 게임시작되면
+    // 소지금 -5, 사용자가 주사위번호를 선택
+    // 컴뷰터가 주사위 5번 한번에 굴리기 
+    // 나온 주사위 번호 중 사용자의 주사위 번호랑 같은 갯수만큼 *2로 소지금 올려주기
+
+    let userNum;
+    let diceNumArr = [];
+    let count= 0;
+    let loan;
+    
+
+    // 사용자 입력
+    if(userYn==true){
+        if(myMoney>=5){
+            myMoney = myMoney-enterMoney;
+            userNum = Number(prompt("주사위 숫자를 입력하세요."));
+        }else{
+            alert("참가비가 부족합니다.");
+            loan = confirm("대출 받으시겠습니까?");
+            if(loan==true){
+                let loanMoney = Number(prompt("대출받으실 금액을입력하세요."));
+                myMoney = myMoney+loanMoney;
+                userNum = Number(prompt("주사위 숫자를 입력하세요."));
+            }
+        }
+    }
+
+    // 주사위 굴리기
+    for(let i=0;i<5;i++){
+        diceNumArr[i]= Math.floor((Math.random()*6)+1);
+    }
+    diceNumArr.sort(function(a,b){return a-b;});
+
+    // 맞춘갯수세기
+    for(let i=0;i<5;i++){
+        if(diceNumArr[i]==userNum){
+            count++;
+        }
+    }
+    
+    // 출력
+    document.write("소지금(전) : "+myMoney+"<br>");
+    document.write("주사위 번호 : "+diceNumArr+"<br>");
+    document.write("내번호 : "+userNum+"<br>");
+    document.write("맞춘갯수 : "+count+"<br>"+count*2+"코인 획득!"+"<br>");
+    if(count>0){
+        myMoney= (myMoney+(count*2)+enterMoney);
+    }
+    document.write("소지금(후) : "+myMoney);
+
+</script>

@@ -1,0 +1,66 @@
+<script>
+
+    let score = Number(prompt("당신의 성적을 적어주세요"));
+
+    document.write(score);
+    document.write("<br>");
+
+    
+
+    if((score >= 90) && (score <= 100)){
+        document.write("A학점 입니다.")
+    }
+    if((score >= 80) && (score < 90)){
+        document.write("B학점 입니다.")
+    }
+    if((score >= 70) && (score < 80)){
+        document.write("C학점 입니다.")
+    }
+    if((score >= 60)&& (score < 70)){
+        document.write("D학점 입니다.")
+    }
+    if((score >= 0) && (score < 59)){
+        document.write("F학점 입니다.")
+    }
+    else{
+        document.write("그런 점수는 없습니다.")
+    }
+
+    // if문장이 있으면 {}중괄호가 실행 영역
+    // if문은 표현식(조건문)에 따라서 실행 여부 판단 > 참일때만 실행
+    // eles가 있는 if문이면 참일때와 거짓일때 모두 실행
+
+    // else if
+    /*
+        if else 문으로 참과 거짓 뿐아니라 또다른 조건에 대한 결과를 출력하고 싶은 것
+
+        if (표현식1, 조건문1) {
+			... 표현식1이 참인 경우 실행하는 실행문1
+		}else if (표현식2, 조건문2){
+			... 표현식1이 거짓이면서 표현식2이 참인 경우 실행하는 실행문2
+		}else {
+            ... 모든 조건문이 거짓일 경우 실행하는 실행문3
+        }
+    */
+
+    // 비교문 작성할때 비교해야할 기준을 왼쪽에 작성
+    // 조건문은 명확할수록 좋다
+    // 조건문을 여러개 사용할 경우 논리연산자 사용
+    // 80 <= score < 90 : 오류나는 조건문
+    // (score >= 80) && (score < 90) : 좋은 조건문
+
+
+    // if문과 동일한 작업
+    /*
+        if : 논리값에 의해서 제어
+        switch : 조건에 대한 값(문자,숫자,불리언) 
+        switch(표현식, 조건문) {
+            case 100:
+            case 99:
+            case 98:
+                ...
+            case 1:
+        }
+
+    */
+</script>

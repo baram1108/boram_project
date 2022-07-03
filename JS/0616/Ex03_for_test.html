@@ -1,0 +1,50 @@
+<script>
+    // 구구단 : 9번 반복
+
+    // for(let i=1; i<10; i++){
+    //     console.log("3 X "+i+" = "+(3*i));
+    // }
+
+    // let n1= Number(prompt("단을 입력해주세요."));
+    // for(let n2=1; n2<10; n2++){
+    //     document.write(n1+"x"+n2+"="+(n1*n2)+"<br>");
+    // }
+
+    // 배수 2의 배수면서 7의 배수
+    // 배수끼리 더한 값
+    // 배수끼리 곱한 값
+    // 배수 갯수
+    // 배수의 숫자도 보여주는 코딩
+
+    // let j; 
+    // let conunt= 0;
+    // for(let i=1; i<10; i++){
+    //     j = (7*i);
+    //     if(j%2==0){
+    //         console.log(j);
+    //     }
+    //     if(j%2==0){
+    //         conunt++;
+    //     }
+    // }
+    // console.log("덧셈 : "+(j+=j));
+    // console.log("곱셈 : "+(j*=j));
+    // console.log("갯수 : "+conunt);
+
+    
+    let hab=0;
+    let gob=1;
+    let cnt=0;
+    for(let i=1; i<101; i++){
+        if((i%2==0)&&(i%7==0)){
+            hab += i;
+            gob *= i;
+            cnt++;
+        }
+    }
+    document.write("합은"+hab+"<br>")
+    document.write("곱은"+gob+"<br>")
+    document.write("갯수는"+cnt+"<br>")
+
+
+</script>

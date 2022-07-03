@@ -1,0 +1,48 @@
+<script>
+
+    // ++ -- : 증감연산자
+    // i = i+1; 변수를 이용하여 반복의 횟수를 정할 수 있도록 반복문을 작성
+    // i += 1; > 증감연산자로 연결
+
+    let i = 1;
+    i++; // 변수(i)라는 값에 더하기 1을 하라
+    console.log(i);
+    i--; // 변수(i) 값에 빼기 을 해라
+    console.log(i);
+
+    ++i;
+    console.log(i);
+
+    --i;
+    console.log(i);
+
+    // 변수++; 변수--; : 어떤코드가 실행된 후 변수에 담긴값을 +1, -1 하는 것
+    //                  실행문이 실행 후 값 변경
+    // ++변수; --변수; : 어떤코드가 실행되기 전  변수에 담긴값을 +1, -1 하는 것
+    //                  실행문이 실행 후 값 변경
+
+    console.log("----------");
+    console.log(i);     // 출력하세요 : 명령어 누구를? i를
+    console.log(i++);   // 출력하세요 , ++ 위치:뒤 > 출력한 후 +1 작업
+    console.log(i);
+
+    console.log("----------");
+    console.log(i);     // 출력하세요 : 명령어 누구를? i를
+    console.log(++i);   // 출력하세요 , ++ 위치:앞 > +1 작업 후 출력
+    console.log(i);
+
+    i = 0;
+    console.log("----------");
+    console.log(i);         // 0 > 0 > 0
+    console.log(i++);       // 0 > 0 > 1
+    console.log(i++);       // 1 > 1 > 2
+    console.log(++i);       // 2 > 3 > 3
+    console.log(++i);       // 3 > 4 > 4
+    console.log(i);         // 4 > 4 > 4
+    console.log(i--);       // 4 > 4 > 3
+    console.log(--i);       // 3 > 2 > 2
+    console.log(i);         // 2 > 2 > 2
+
+
+    
+</script>

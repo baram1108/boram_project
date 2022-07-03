@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div,header{
+            width: max-content;
+            margin: auto;
+        }
+        /*태그를 선택하는 방법 3가지
+            태그명 / id / class +태그내에 작성하는 방법(인라인 스타일)
+        */
+        #id,#password{
+            width: 326px; /*input 태그는 기본적으로 border와padding이 있음*/
+            height: 46px;
+            border: 1px solid rgb(220, 220, 220);
+        }
+        #loginbtn{
+            width: 332px;
+            height: 52px;
+            cursor: pointer;
+            background-color: #f43142;
+            border: 1px solid #f43142;
+            color: #ffffff;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .simplelogin{
+            margin-top: 70px;
+        }
+        .title{
+            text-align: center;
+            font-size: 16px;
+            color: #999;
+            margin: 0px;
+            margin-bottom: 80px;
+        }
+        .spanlogo{
+            background-size: 100%;
+            padding: 80px 10px 0px;
+            width: 84px;
+            height: 84px;
+            background-repeat: no-repeat;
+            color: #999;
+        }
+        .kakao{
+            background-image: url(img/kakao.png);
+        }
+        .skt{
+            background-image: url(img/skt.png);
+            background-size: 90%;
+        }
+        .naver{
+            background-image: url(img/naver.png);
+            }
+        .mobile{
+            background-image: url(img/mobile.png);
+        }
+        .left_side{
+            display: inline-block
+        }
+        .right_side{
+            margin-left: 27px;
+            display: inline-block
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <img src="img/11st.png" style="width:150px; margin-top: 60px; margin-bottom: 40px;">
+        </header>
+        <!-- 로그인 담당할 박스 -->
+        <div>
+            <section>
+                <article>
+                    <input type="text" id="id" placeholder="아이디"><br/>
+                    <input type="password" id="password" placeholder="비밀번호"><br/>
+                    <input type="button" id="loginbtn" value="로그인">
+                </article>
+            </section>
+        </div>
+        <div class="left_side">
+            <input type="checkbox" id="autologin">
+            <label for="autologin">자동로그인</label>
+        </div>
+        <div class="right_side">
+            <a href="#">아이디찾기 |</a>
+            <a href="#">비밀번호찾기</a>
+        </div>
+        <div class="simplelogin">
+            <h2 class="title">간편로그인</h2>
+            <div class="logo">
+                <a href="#카카오"><span class="kakao spanlogo">카카오</span></a>
+                <a href="#티아이디"><span class="skt spanlogo">T아이디</span></a>
+                <a href="#네이버"><span class="naver spanlogo">네이버</span></a>
+                <a href="#휴대폰"><span class="mobile spanlogo">휴대폰</span></a>
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

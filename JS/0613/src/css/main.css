@@ -1,0 +1,60 @@
+.div1 ul{
+    width: 100px;
+    background-color: wheat;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.div1 li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+.div1 li a:hover{
+    background-color: burlywood;
+    color: white;
+}
+
+.div2 ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: wheat;
+    overflow: hidden;
+}
+.div2 li{
+    float: left;
+}
+.div2 li a{
+    display: block;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: wheat;
+    font-weight: bolder;
+    color: black;
+}
+
+.div2 li a:hover:not(.home){
+    background-color: burlywood;
+    color: white;
+}
+
+.dropdown-div{
+    display: none;
+    position: absolute;
+    min-width: 80px;
+    padding: 5px;
+}
+.dropdown:hover .dropdown-div{
+    display: block;
+}
+
+li a.home{
+    background-color: coral;
+    color: white;
+}

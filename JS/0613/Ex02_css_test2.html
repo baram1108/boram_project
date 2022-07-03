@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            width: 500px;
+            margin: auto;
+        }
+        .dropdown3{
+            background-color: coral;
+            border: 1px solid coral;
+            text-align: center;
+            width: 80px;
+            padding: 5px;
+        }
+        
+        .dropdown4{
+            list-style: none;
+            display: none;
+            background-color: wheat;
+            border: 1px solid wheat;
+            text-align: center;
+            width: 80px;
+            padding: 10px;
+
+        }
+        .dropdown3:hover ~ .dropdown4{
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1> 드롭다운</h1>
+    <div><span class="dropdown3">Dropdown</span>
+        <ul class="dropdown4">
+            <li>새해</li>
+            <li>복</li>
+            <li>많이</li>
+            <li>받으세요</li>
+        </ul>
+    </div>
+</body>
+</html>

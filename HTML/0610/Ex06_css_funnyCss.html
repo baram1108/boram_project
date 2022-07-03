@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .div1 ul{
+            width: 100px;
+            background-color: wheat;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .div1 li a{
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bolder;
+            color: black;
+        }
+        .div1 li a:hover{
+            background-color: burlywood;
+            color: white;
+        }
+
+        .div2 ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: wheat;
+            overflow: hidden;
+        }
+        .div2 li{
+            float: left;
+        }
+        .div2 li a{
+            display: block;
+            width: 70px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            background-color: wheat;
+            font-weight: bolder;
+            color: black;
+        }
+
+        .div2 li a:hover:not(.home){
+            background-color: burlywood;
+            color: white;
+        }
+
+        .dropdown-div{
+            display: none;
+            position: absolute;
+            min-width: 80px;
+            padding: 5px;
+        }
+        .dropdown:hover .dropdown-div{
+            display: block;
+        }
+
+        li a.home{
+            background-color: coral;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1> li 와 a 태그를  사용하여 만드는 리스트 메뉴</h1>
+
+    <div class="div1">
+        <ul>
+            <li><a href="#" class="home">HOME</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+    </div>
+    <br/>
+    <div class="div2">
+        <ul>
+            <li><a href="#" class="home">HOME</a></li>
+            <li>
+                <div class="dropdown"><a href="#">뉴스</a>
+                    <div class="dropdown-div">
+                    <a href="#">A일보</a>
+                    <a href="#">B일보</a>
+                    <a href="#">C일보</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">웹툰</a></li>
+            <li><a href="#">부동산</a></li>
+            <li><a href="#">쇼핑</a></li>
+            <li><a href="#">날씨</a></li>
+            <ul style="float: right; list-style-type: none;">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </ul>
+    </div>
+
+</body>
+</html>

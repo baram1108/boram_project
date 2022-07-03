@@ -1,0 +1,27 @@
+<!--
+    css 적용 방법 3가지
+    1. 인라인 스타일 : 대상이 하나의 태그
+        <tag style="">
+    2. 내부 스타일 시트 : 대상이 하나의 html문서
+        <style type="text/css"></style>
+    3. 외부 스타일 시트 + css파일이 존재해야함 : 필요할때마다 사용
+        <link rel="stylesteet" href="css파일 경로">
+        * 외부스타일시트 바일명을 *.css로 생성
+        <link> 로 연결만 해주면 됨
+        *사용이유 : 하나의 문서에서 다양한 언어를 작성하지 않아도 되는 장점
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="out_style.css">
+</head>
+<body>
+    <p>인라인 스타일</p>
+    <p>내부스타일 시트</p>
+    <p>외부스타일 시트</p>
+
+    
+</body>
+</html>

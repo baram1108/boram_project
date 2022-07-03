@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>이벤트 차이</h2>
+    <button id="btn1">클릭1</button>
+    <button id="btn2">클릭2</button>
+</body>
+<script>
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+
+    function fn1(){
+        console.log("fn1");
+    }
+
+    function fn2(){
+        console.log("fn2");
+    }
+
+    btn1.onclick = fn1; // 이벤트 덮어씌워져 사라짐
+    btn1.onclick = fn2;
+
+    btn2.addEventListener("click", fn1);
+    btn2.addEventListener("click", fn2);
+
+    // 옛방식 > 이벤트명이 같을경우 덮어씌워짐
+    // 표준방식 > 이벤트명이 같더라도 다른 이벤트로 처리
+</script>
+</html>

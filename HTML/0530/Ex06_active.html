@@ -1,0 +1,55 @@
+<!-- Ex06_active.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <!-- 
+            HTML : 뼈대  > 기능을 담당하는 태그 존재
+            CSS : 꾸밈요소
+            JavaScript : 이벤트, 사건, 기능
+
+        -->
+
+        <!-- 링크 태그 <a> -->
+        <!-- href 라는 속성을 필수로 작성 : 하이퍼링크 > 링크 : 이동할 주소를 작성 
+            현재 웹페이지 에서 다른 페이지나 다른 사이트로 연결해주는 태그
+        -->
+        <a href="링크주소"> HTML 설명 </a><br/>
+        <a href="https://www.naver.com"> 네이버 이동 </a><br/>
+        <!--
+            target 속성 : 링크로 연결된 페이지를 보여줄 방법
+            _blank : 새탭 오픈
+            _self : 내 프레임에서 오픈 *기본값
+        -->
+        <a href="https://www.google.com"> 구글 이동 </a><br/>
+        <a href="https://www.daum.net" target="_blank"> 다음 이동 </a>
+
+        <br>
+        <hr>
+        <!-- img : 이미지태그, jpg, gif, png ... 
+            src *필수 : 이미지 주소 작성
+            alt *필수 : 이미지를 불러올때 실패햇을때를 대비하는 문자열
+        -->
+
+        <!-- 1. <a> 태그를 통해서 페이지의 이동을 담당하는 기능
+             2. <img> 태그를 통해서 이미지를 출력하는 기능 
+
+             1번기능 과 2번기능 합쳐야합니다.
+
+        -->
+        <a href="https://www.google.com/search?q=%EC%82%AC%EA%B3%BC&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiY6IaFp4b4AhXEzmEKHbRTAM0Q_AUoAXoECAIQAw&biw=1076&bih=722&dpr=1" target="_blank">
+        <img src="./test.jpg" alt="이미지가 없습니다." style="width: 300px; height: 400px;">
+        </a>
+
+        <!--
+            1번 기능에서 글자대신에 <img> 태그를 작성
+            href 라는 경로상에 검색을했을때의 주소로 변경
+        -->
+        <br><hr>
+        <a href="https://www.google.com/search?q=%EC%82%AC%EA%B3%BC&hl=ko&tbm=isch&source=lnms&sa=X&ved=2ahUKEwijnq_1t4b4AhWCaN4KHfKBAZ4Q_AUoAXoECAEQAw&biw=1076&bih=722&dpr=1" target="_blank">
+            <img src="./test.jpg" alt="이미지가 없습니다." /> 
+        </a>
+    </body>
+</html>

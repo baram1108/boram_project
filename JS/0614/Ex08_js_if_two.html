@@ -1,0 +1,94 @@
+<!--  Ex08_js_if_two.html -->
+<script>
+    /*
+
+        if ( 표현식, 조건문 ) {
+            ... 실행문1
+        }else { 
+            ... 실행문2
+        }
+
+        실행문 : 출력문, 제어문, 변수 선언문 등...
+
+
+        if ( 표현식1, 조건문1 ){
+            // 실행문
+            if ( 표현식2, 조건문2 ) {
+                // 표현식1이 참이면서 표현식2가 참인경우
+
+            }else if( 표현식3, 조건문3 ){
+                // 표현식1이 참이면서 표현식3이 참인경우
+
+            }else {
+                // 표현식1이 참이면서 표현식2,3이 거짓인경우
+            }
+        }else if() {
+            // if가능
+        }else {
+            // if가능
+        }
+        // 논리식으로 작성된 코드를 이중 if로 변경이 가능함
+
+    */
+   
+    var month = 1;
+
+    if ( month == 2 ){
+        console.log("28일까지입니다.")
+    }else if ( (( month <=7 ) && ( month%2 == 1 )) || ((month > 7) && (month%2 == 0)) ){
+        console.log("31일까지입니다.")
+    }else {
+        console.log("30일까지입니다.")
+    }
+
+    if ( month >= 1 && month <= 12 ){
+
+        // 월에 대한 일자가 나오는 문장
+        // 만약에 month가 1이면 ~~
+        // 2이면 ~~
+
+    }else {
+        console.log("올바른 월이 아닙니다.")
+    }
+
+
+    if(month == 2){
+        console.log("28일까지입니다.")
+    }else {
+        if( month%2 == 1 ){
+            // 홀수 
+            if( month <=7 ){
+                console.log("31일까지입니다.")
+            }else {
+                console.log("30일까지입니다.")
+            }
+        }else{
+            // 짝수
+            if(month > 7){
+                console.log("31일까지입니다.")
+            }else{
+                console.log("30일까지입니다.")
+            }
+        }
+    }
+
+    let score = Number(prompt("점수를 입력하세요"));
+
+    // if 1. 조건 60점이상 합격
+    //            60미만 불합격
+    //            30점미만 불합격 + 2년 응시 제한
+
+    if ( score >= 60 ){
+        console.log('합격');
+    }else {
+        console.log('불합격');
+        if ( score < 30){
+            console.log('2년 응시 제한');
+        }
+    }
+
+
+
+
+
+</script>

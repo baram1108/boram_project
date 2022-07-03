@@ -1,0 +1,38 @@
+<script>
+    let jumsu = [];
+    let sum = 0;
+
+    // 사용자에게 입력받기
+    // usrNum1 = Number(prompt("국어 점수를 입력해주세요"));
+    // usrNum2 = Number(prompt("수학 점수를 입력해주세요"));
+    // usrNum3 = Number(prompt("영어 점수를 입력해주세요"));
+
+    // jumsu[0] = usrNum1
+    // jumsu[1] = usrNum2
+    // jumsu[2] = usrNum3
+
+
+
+    // 반복문 이용
+    while(true){
+        usrNum = Number(prompt("점수를 입력해주세요"));
+        
+        if(usrNum==0){
+            break;
+        }
+
+        jumsu.push(usrNum);
+    }
+
+    // sum = 70 + 80 + 90
+    // sum = jumsu[0] + jumsu[1] + jumsu[2];
+
+    for(let i=0; i<jumsu.length; i++){
+        sum += jumsu[i];
+    }
+    console.log("입력한 점수 : [ "+jumsu+" ] ");
+    console.log("점수 합산 : "+sum);
+    console.log("점수 평균 : "+sum/jumsu.length);
+
+
+</script>

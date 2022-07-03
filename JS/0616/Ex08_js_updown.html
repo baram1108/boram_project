@@ -1,0 +1,46 @@
+<script>
+    // 규칙
+    // 1. 정답
+    // 2. 정답을 맞추기위해 입력한 값
+    // 3. 정답과 입력한 값 비교
+    // 4. 비교한 결과를 보여주기
+    // 5. 같은지, 다른지(높은지 낮은지)
+    
+    // 반복은 몇번부터 몇번까지 ? 2 ~ 5, 기회 5번 
+    // 종료는 언제까지? 5번 다 끝나거나 정답을 맞추거나
+
+    // 1. 정답을 표현할 방법
+    let correct = Math.floor((Math.random()*100)+1);
+
+    let usrNum = Number(prompt("UPDOWN GAME\n1 ~ 100 중에 정답이 있습니다. \n하나를 입력해주세요!"));
+    for(let i=1;i<6;i++){
+        
+        // 2.
+        // 3 ~ 5.
+        if(correct == usrNum){
+            console.log("정답!");
+            // i = 5; // 반족조건을 "강제로" 거짓으로 만들어주는 방법
+            break; // 반복문을 종료하는 키워드
+            // break를 만나면 다음문장을 실행하지 않고 즉시 종료
+        }else if(correct > usrNum ){
+            // 정답 > 입력한 값 :
+            console.log("up!");
+            prompt("UPDOWN GAME\n"+usrNum+"~ 100 중에 정답이 있습니다. \n하나를 입력해주세요!");
+            
+        }else if(correct < usrNum){
+            console.log("down~");
+            prompt("UPDOWN GAME\n1 ~ "+usrNum+" 중에 정답이 있습니다. \n하나를 입력해주세요!")
+            
+        }else{
+            console.log("숫자를 입력해주세요");
+        }
+    }
+    console.log("정답 : "+correct)
+
+    // 추가해야할 부분
+    // 1. 정답이 10으로 고정이 되어있다는것
+    // 2. 정답을 맞추면 게임이 끝나는 것
+    // 3. 처음입력한 값은 지문에 출력되지만 이후는 X
+
+
+</script>

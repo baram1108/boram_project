@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        #blue{
+            background-color: rgb(0, 136, 254);
+            color: white;
+            width: 150px;
+            height: 50px;
+            padding: 10px 25px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+        }
+        #dark{
+            background-color: rgb(73, 78, 86);
+            color: white;
+            width: 150px;
+            height: 50px;
+            padding: 10px 50px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border-radius: 10px;
+        }
+
+        /*
+            a 태그 link 의 경구 5가지 형태
+
+            1. link : 한번도 접속하지 않은 상태, 기본상태
+            2. visited : 한번이라도 방문한 상태
+            3. hover : 커서가 링크 위로 올라간 상태
+            4. active : 링크를 클릭하고 있는 상태
+            5. focus : 키보드나 마우스가 이벤트 또는 다른 형태로 태그에 포커스되고 있을때
+        */
+        /* a태그중에 id가 test*/
+        /* 상태를 선택할때는 :(콜론)을 사용하여 선택 */
+        a#test:link{
+            color: olive;
+        }
+        a#test:visited{
+            color: brown;
+        }
+        a#test:hover{
+            color: coral;
+            text-decoration: underline;
+        }
+        a#test:active{
+            color: khaki;
+            text-decoration: overline;
+        }
+
+        #exam{
+            background-color: rgb(0, 136, 254);
+            color: white;
+            width: 150px;
+            height: 50px;
+            padding: 10px 50px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border-radius: 10px;
+        }
+        a#exam:hover{
+            background-color: rgb(73, 78, 86);
+            color: white;
+            width: 150px;
+            height: 50px;
+            padding: 10px 50px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a id="normal" href="#"> 링크 버튼 1 </a><br><br>
+    <a id="blue" href="#"> 링크 버튼 2 </a><br><br>
+    <a id="dark" href="#"> 링크 버튼 3 </a><br>
+    <br><br>
+    <a id="test" href="#1"> 버튼연습 </a>
+    <br><br><br>
+    <a id="exam" href="#3">링크버튼</a>
+
+</body>
+</html>

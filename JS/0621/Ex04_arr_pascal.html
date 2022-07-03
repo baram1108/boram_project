@@ -1,0 +1,32 @@
+<script>
+    let arr7=[];
+    for(let i=0; i<5; i++){
+        arr7[i]=[];
+        for(let j = 0 ; j < 5 ; j++){
+            arr7[i][j]=0;
+        }
+    }
+
+
+    for(let i=0; i<5; i++){
+        for(let j = 0 ; j < 5 ; j++){
+            if((i == 0) || (j == 0)){
+                arr7[i][j] = 1;
+            }else{
+                // 위를 표현 식
+                let up = arr7[i-1][j];
+                let left = arr7[i][j-1];
+                arr7[i][j] = up + left;
+            }
+        }
+    }
+
+    for( let i = 0; i < 5; i++){
+        for ( let j = 0 ; j < 5 ; j++){
+            document.write(arr7[i][j]+" ");
+        }   
+        document.write("<br>");
+    }
+
+
+</script>

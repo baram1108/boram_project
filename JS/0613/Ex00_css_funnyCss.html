@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+    <h1> li 와 a 태그를  사용하여 만드는 리스트 메뉴</h1>
+
+    <div class="div1" id="id">
+        <ul>
+            <li><a href="#" class="home">HOME</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+    </div>
+    <br/>
+    <div class="div2" id="id2">
+        <ul>
+            <li><a href="#" class="home">HOME</a></li>
+            <li>
+                <div class="dropdown"><a href="#">뉴스</a>
+                    <div class="dropdown-div">
+                    <a href="#">A일보</a>
+                    <a href="#">B일보</a>
+                    <a href="#">C일보</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">웹툰</a></li>
+            <li><a href="#">부동산</a></li>
+            <li><a href="#">쇼핑</a></li>
+            <li><a href="#">날씨</a></li>
+            <ul style="float: right; list-style-type: none;">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </ul>
+    </div>
+
+</body>
+    <script src="./src/js/main.js"></script>
+</html>

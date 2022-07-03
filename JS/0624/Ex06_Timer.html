@@ -1,0 +1,35 @@
+<script>
+    /*
+        Timer : 함수가 일정시간 뒤에 호출되도록 딜레이를 주는 방법
+
+        setTimeout() : clearTimeout() : 일정시간 뒤에
+        setInterval() : clearInterval() : 일정시간마다 반복
+    */
+
+    let timerId;
+
+    function timer(){
+        // setTimeout(실행할 함수, 지연할시간ms) // 1000ms : 1초
+        timerId = setTimeout(getDate, 2000);
+    }
+
+    function interval(){
+        // setInterval(실행할 함수, 지연할시간ms) // 1000ms : 1초
+        timerId = setInterval(getDate, 1000);
+    }
+
+    function stop(){
+        clearInterval(timerId) // 지연되고 있는 함수를 종료
+    }
+
+    function getDate(){
+        // new Date = 날짜 관련된 객체
+        document.getElementById("date").innerHTML = new Date() + "<br>"
+    }
+</script>
+<body>
+    <!-- <button onclick="timer()">클릭해주세요</button> -->
+    <button onclick="interval()">클릭해주세요</button>
+    <button onclick="stop()">멈춰!</button>
+    <p id="date">현재시간<br></p>
+</body>

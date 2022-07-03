@@ -1,0 +1,84 @@
+<script>
+    /*
+        1. 랜덤한 숫자 1~45 * 6 : 중복 무시
+            배열 생성 + 1 ~ 45 랜덤한 숫자 : 로또번호
+            6칸 미리 만들어 놓든가
+            입력을 해서 배열에 하나씩 추가하여 6칸
+
+        2. 사용자가 입력한 숫자 1~45 * 6 :중복무시
+            배열 생성  1~45 입력번호 숫자 : 사용자 입력번호
+            while
+
+        3. 1번의 숫자와 2번의 숫자를 비교
+            for if
+
+        4. 결과 출력 대상
+            1. 맞춘 갯수
+            2. 컴퓨터랜덤숫자
+            3. 사용자입력숫자
+
+        * 중복제거, 정렬, 보너스숫자는 제외
+    */
+
+    let lottoNum = [];
+    let myNumArr = [];
+    let count = 0;
+
+    for(let i=0;i<6;i++){
+        // 랜덤한 숫자로 선언하는 문장
+        lottoNum[i]=Math.floor((Math.random()*45)+1);
+        // 선언된 숫자를 배열에 등록하는 문장
+        for(let j=0;j<i;j++){
+            if(lottoNum[j]==lottoNum[i]){
+                i--;
+            }
+        }
+    }
+
+    // 정렬 : 컴퓨터의 대입방식에 대해서 생각해야한다.
+    // 컴퓨터에서는 값을 저장할때 기존에 있는 값을 덮어씌움.
+    // 프로그래밍에서는 정렬시에 값을 옮기는 것을 도와주기 위한 변수가 필요
+    for(let i=0;i<lottoNum.length;i++){
+        let tmp=0;
+        for(let j=0;j<lottoNum.length-1;j++){
+            if(lottoNum[j]>lottoNum[j+1]){
+                tmp = lottoNum[j];
+                lottoNum[j]=lottoNum[j+1];
+                lottoNum[j+1]=tmp;
+            }
+        }
+    }
+
+    // lottoNum.sort(function(a,b){return a-b;});
+    // sort 함수내에서 비교할때 사용하는 변수를 a,b로 선언
+    // a - b : "-" 사칙연산을 사용하면 숫자형으로 자동 변경
+    // a-b : 양수(+) : a가 더 크다 :  변경
+    // a-b : 음수(-) : a가 작다 : 변경안함
+
+
+
+    for(let i=0;i<6;i++){
+        let myNum = Number(prompt((i+1)+"번째 번호를 입력하세요"));
+        myNumArr.push(myNum);
+        for(let j=0;j<i;j++){
+            if(myNumArr[j]==myNumArr[i]){
+                myNumArr.pop();
+                i--;
+            }
+        }
+    }
+
+    for(let i=0;i<6;i++){
+        for(let j=0;j<6;j++){
+            if(lottoNum[i] == myNumArr[j]){
+                count++;
+            }
+        }
+    }
+
+    console.log("맞춘갯수 : "+count);
+    console.log("컴퓨터랜덤숫자 : "+lottoNum);
+    console.log("사용자입력숫자 : "+myNumArr.sort(function(a,b){return a-b;}));
+
+    
+</script>

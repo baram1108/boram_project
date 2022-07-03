@@ -1,0 +1,120 @@
+<script>
+    /*
+        ----*
+        ---**
+        --***
+        -****
+        *****
+
+        *****
+        ***
+    */
+
+    for(let i=0;i<=4;i++){
+        // i = 1 j = 1
+        // i = 2 j = 2
+        // i = 1 j = 1
+        // i = 1 j = 1
+        for(let k=0;k<4-i;k++){
+            document.write("-")
+        }
+        for(let j=0;j<=i;j++){
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+
+    document.write("<hr>")
+
+    // *****
+    // -****
+    // --***
+
+    for(let i=0;i<=4;i++){
+        for(let k=0;k<i;k++){
+            document.write("-")
+        }
+        for(let j=5;j>i;j--){
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+
+    document.write("<hr>")
+
+    for(let i=0;i<9;i++){
+        if(i<=4){
+            for(let j=4;j>i;j--){
+                document.write("-")
+            }
+            for(let j=0;j<=i;j++){
+                document.write("*")
+            }
+        document.write("<br>")
+        }else{
+        // i = 5 j범위 = 0
+        // i = 6 j = 1
+        // i = 7 j = 2
+        // i = 8 j = 3
+            for(let k=0;k<=i-5;k++){
+                document.write("-")
+            }
+            for(let j=0;j<9-i;j++){
+            document.write("*")
+        }
+        document.write("<br>")
+        }
+    }
+
+    document.write("<hr>")
+    
+    for(let i=1; i<6;i++){
+        for(let a=5;a>i;a--){
+            document.write("-")
+        }
+        for(let b=0;b<(i*2);b++){
+        // i = 1 b범위 = 1
+        // i = 2 b = 3
+        // i = 3 b = 5
+        // i = 4 b = 7
+        // i = 5 b = 9
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+    document.write("<hr>")
+
+    for(let i=0;i<9;i++){
+        if(i<=4){
+            for(let j=4;j>i;j--){
+                document.write("-")
+            }
+            for(let j=0;j<(i*2);j++){
+                document.write("*")
+            }
+        document.write("<br>")
+        }else{
+            for(let j=0;j<=i-5;i++){
+        // i = 5 j범위 = 1
+        // i = 6 j = 2
+        // i = 7 j = 3
+        // i = 8 j = 4
+                document.write("-")
+            }
+            for(let j=0;j>9-(i*2);j++){
+        // i = 5 j범위 = 7
+        // i = 6 j = 5
+        // i = 7 j = 3
+        // i = 8 j = 1
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+    }
+
+    // *****
+    // 
+    // 
+    // 
+    // 
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        input[type="text"]{
+            width: 190px;
+            height: 30px;
+            border: 1px solid lightblue;
+            text-align: right;
+        }
+        input[type="button"]{
+            width: 50px;
+            font-size: 30px;
+            text-align: center;
+        }
+        tr{
+            border-radius: 50px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text"><br>
+        <input type="text" id="input1">
+        <table>
+            <tr>
+                <td colspan="2"><input type="button"value="ac"></td>
+                <td><input type="button"value="%" onclick="calc('%')"></td>
+                <td><input type="button"value="/"onclick="calc('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="num" onclick="num()" value="7"></td>
+                <td><input type="button" class="num" onclick="num()" value="8"></td>
+                <td><input type="button" class="num" onclick="num()" value="9"></td>
+                <td><input type="button" value="x"onclick="calc('x')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="num" onclick="num()" value="4"></td>
+                <td><input type="button" class="num" onclick="num()" value="5"></td>
+                <td><input type="button" class="num" onclick="num()" value="6"></td>
+                <td><input type="button" value="-"onclick="calc('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="num" onclick="num()" value="1"></td>
+                <td><input type="button" class="num" onclick="num()" value="2"></td>
+                <td><input type="button" class="num" onclick="num()" value="3"></td>
+                <td><input type="button"value="+"onclick="calc('+')"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="num" onclick="num()" value="0"></td>
+                <td colspan="2"><input type="button"value="="onclick="calc('=')"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function num(){
+        let num = Number(document.getElementsByClassName("num").value);
+        
+        Number(document.getElementById("input1").value=num);
+    }
+
+    // function calc(str){
+    //     if( str == "덧셈"){
+
+            
+    //     }else if (str =="뺄셈"){
+            
+    //     }else if(str == "곱셈"){
+           
+    //     }else{
+            
+    //     }
+    // }
+
+</script>
+</html>

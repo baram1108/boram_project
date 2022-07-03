@@ -1,0 +1,91 @@
+<!--
+    float : 뜨다, 떠있다
+
+    HTML 구조를 정렬할때 하나의 큰 면에 레이아웃을 설정하는 것
+    왼쪽 상단 기준으로 박스 모델을 정렬해 나감
+
+    float : 요소를 자연스럽게 만들어주는 옵션이지만 레이아웃을 만들때 주로 사용
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        img{
+            /* 이미지태그를 띄워라 왼쪽으로 
+                띄운다 : 공간은 차지하는데 다른 요소의 배치에 영향을 안주는 요소
+                * 다른 요소들이랑 다르게 붕떠있다
+            */
+            float: left;
+        }
+        .clear{
+            clear: both;
+        }
+        /* float : 부유하는 속성을 가진 태그를 만든다 */
+        #a{
+            border: 1px solid red;
+            float: left;
+        }
+        #b{
+            border: 1px solid blue;
+            float: right;
+        }
+        div.float2{
+            border: 2px solid seagreen;
+            padding: 5px;
+        }
+        .left{
+            width: 200px;
+            height: 50px;
+            background-color: tomato;
+            float: left;
+        }
+        .right{
+            width: 200px;
+            height: 50px;
+            background-color: gold;
+            float: right;
+        }
+        h2{
+            /* float 속성으로 인한 요소들의 흐름을 다시 원상복귀해주는 속성
+                float 속성을 다 쓰고 난 이후 적용할 태그에게 선언
+                float 속성을 없애라는 의미
+            */
+
+            clear: both;
+        }
+        .overflow{
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2> float 연습 </h2>
+    <p><img src="test.jpg" alt="@" width="100px" height="100px">테스트 중 입니다. **HTML 구조를 정렬할때 하나의 큰 면에 레이아웃을 설정하는 것
+        왼쪽 상단 기준으로 박스 모델을 정렬해 나감
+        float : 요소를 자연스럽게 만들어주는 옵션이지만 레이아웃을 만들때 주로 사용</p>
+    
+    <div class="clear"></div>
+
+    <div id="a">Hello, wolrd</div>
+    <div id="b">안녕, 세계</div>
+
+    <div class="clear"></div>
+
+    <h2>float 연습2</h2>
+    <div class="float2">
+        <div class="float2 left">왼쪽 끝 요소</div>
+        <div class="float2 right">오른쪽 끝 요소</div>
+    </div>
+    <h2>연습 끝</h2>
+
+    <h1> overflow</h1>
+    <div class="float2"> 이미지와 이미지설명 택스트
+        <img src="test.jpg" alt="@" width="100px" height="100px">
+    </div>
+    <p class="clear"></p><p></p>
+    <div class="float2 overflow"> 이미지와 이미지설명 택스트
+        <img src="test.jpg" alt="@" width="100px" height="100px">
+    </div>
+</body>
+</html>

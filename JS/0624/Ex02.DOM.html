@@ -1,0 +1,39 @@
+<script>
+    /*
+        DOM : document Object Model : 문서객체모델
+              > XML, HTML문서에 접근하기위한 인터페이스(설계서)
+              >> 모든 문서에 대한 요소를 정의하고, 접근하는 방법을 제공합니다.
+
+              document << DOM의 시작점, 모든 요소와 속성을 가지고 있는 객체
+
+              HTML 새로운 요소 및 속성 생성 가능
+              HTML 존재하는 요소 및 속성 제거가능
+              HTML 모든 요소 변경
+              HTML 모든 속성 변경
+              HTML 내의 CSS 속성도 변경 가능
+              HTML 모든 이벤트를 반응 가능 
+    
+    */
+
+    document.getElementById("검색할 아이디") // 요소의 id 가져와라 > 해당 id를 가진 태그를 선택해라 > 내용,속성, css 변경가능하도록 선택
+                                             // #아이디
+
+    document.getElementsByTagName("태그이름") // 해당 이름을 가진 모든 요소(태그)를 선택
+    document.getElementsByClassName("클래스이름") // 해당 클래스 이름을 가진 모든 요소를 선택 class=""
+    document.getElementsByName("네임속성이름")  // 해당 name 이름을 가진 모든 요소 선택     name=""
+
+    document.getElementById("아이디이름") // 해당 아이디 이름을 가진 요소 선택
+
+    // * s가 붙으면 배열로 데이터를 저장 / s가 안붙으면 단일
+    // [ {태그1} {태그2} {태그3} ]  / {태그}
+
+    document.querySelector("") // css선택자로 첫번째 요소(태그)를 선택, # . + ㄴ >
+    document.querySelectorAll("") // css선택자로 모든 요소(태그)를 선택
+
+    document.createElement(html요소); // 태그를 생성> document.getElementById("").createElement(html요소) : id선택한 뒤 그 태그에 자식태그 생성
+                 // document.createElement(html요소) : 태그가 생성 > appendChild()
+    document.write("문자열") // 택스트가 작성
+
+
+
+</script>

@@ -1,0 +1,36 @@
+<script>
+    /*
+        window 객체 : BOM 모델 안에 있는 객체
+                      Brwser Object Model : 브라우저에 대한 기능들을 제어할 수 잇는 모델
+
+        window : 웹브라우저의 창을 나타내는 객체
+                 DOM 요소들은 window 객체의 프로퍼티
+    */
+
+    let windowW = innerWidth;
+    let windowH = innerHeight;
+
+    document.write("헌재 웹브라우저의 너비 : " + windowW +"<br>");
+    document.write("헌재 웹브라우저의 높이 : " + windowH +"<br>");
+
+    let obj;
+    function openWin(){
+        // open (url, name, specs, replace)
+        // url : 보여줄 페잊
+        // name : 속성 어떻게 열것이냐 : _blank(새창), _self(현재창), _parent(부모프레임)
+
+        // specs : 페이지 열릴때 창의 크기 스크롤여부 크기변경여부 * IE에서만 제대로 작동
+        obj = window.open("http://naver.com","_blank", "width=400px,height=300px");
+    }
+    function closewWin(){
+        obj.close()
+    }
+
+
+</script>
+<body>
+    <h1>새창 열기</h1>
+    <button onclick="openWin()">새창열기</button>
+    <button onclick="closewWin()">새창닫기</button>
+    
+</body>

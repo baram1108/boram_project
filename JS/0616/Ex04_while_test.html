@@ -1,0 +1,50 @@
+<script>
+    // 1~100 while ,dowhile
+    // 100~1 While, //
+    // 246810
+    // 3배수 && 4배수 1~50 / hab gob cnt
+
+    // let i=1;
+    // while(i<101){
+    //     document.write(i++ +"<br>");
+        
+    // }
+    // document.write("<hr>");
+
+    // do {
+    //     document.write(i+"<br>");
+    //     i++;  
+    // } while (i<101);
+
+    // let i =100;
+    // while(i>=1){
+    //     document.write(i+"<br>");
+    //     i--;
+    // }
+
+    let i=2;
+    while(i<11){
+        document.write(i+"<br>");
+        i+=2;
+    }
+
+    i=1;
+    let cnt=0;
+    let hab=0;
+    let gob=1;
+    while(i<51){
+        if((i%3==0)&&(i%4==0)){
+            document.write(i+"<br>");
+            cnt++;
+            hab+=i;
+            gob*=i;
+        }
+        i++;
+    }
+    document.write("합은"+hab+"<br>")
+    document.write("곱은"+gob+"<br>")
+    document.write("갯수는"+cnt+"<br>")
+    
+
+
+</script>

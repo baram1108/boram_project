@@ -1,0 +1,71 @@
+<script>
+    // addNum
+    // minusNum
+    // multNum
+
+    addNum(2,3);
+    minusNum(2,3);
+    multiNum(2,3);
+
+    function addNum(a,b){
+        let addNum = a+b;
+        console.log(addNum);
+    }
+    function minusNum(a,b){
+        let minusNum = a-b;
+        console.log(minusNum);
+    }
+    function multiNum(a,b){
+        let multiNum = a*b;
+        console.log(multiNum);
+    }
+
+    function addnum2(a,b){
+        let sum=0;
+        for(let i=a;i<=b;i++ ){
+            sum+=i;
+        }           
+        return sum;
+    }
+    let add= addnum2(1,10)
+    console.log(add);
+
+    function minusnum(a,b){
+        let sum=0;
+        for(let i=a;i<=b;i++ ){
+            sum-=i;
+        }           
+        return sum;
+    }
+    let minus=minusnum(1,10)
+    console.log(minus);
+
+
+
+
+
+    // c: + - * /
+    function calc(a,b,c){
+        // return : 함수내에서 하나만 존재 
+        // * 예외 if문이나 반복문의 경우 작성하더라도 실행을 안할 경우 발생
+        // >> 그 상황에 맞춰서 return을 작성해야함
+        // 자바스크립트는 return 제약이 느슨해서 자유롭게 작성아 가능하다
+        switch(c){
+            case "+":
+                return a+b;
+                break;
+            case "-":
+                return a-b;
+                break;
+            case "*":
+                return a*b;
+                break;
+            case "/":
+                return a/b;
+                break;
+        }
+        
+    }
+    console.log(calc(1,6,"*"));
+    
+</script>

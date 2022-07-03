@@ -1,0 +1,29 @@
+<script>
+
+    var str = ["강우석","김규빈","김보람","김승환","김영진","박수정","박정훈","박진영95","박진영94","박희원","서지현","신승현","신유환","안예진","안상화","오수한","윤새라","이지윤","정미리","정찬우","차미지","허영민"];
+ 
+         
+         var arr = [];
+         
+         for(var i = 0; i < str.length; i++) {
+             arr[i] = Math.floor(Math.random()*str.length);
+             for(var j = 0 ; j < i ; j ++) {
+                 if( arr[i] == arr[j]) {
+                     i--;
+                 }
+                 
+             }
+         }
+         var cnt = 1; // 뽑고싶은 사람수
+ 
+ 
+         for(var i = 0; i < cnt; i++) {
+             
+             // document.write(i+1 + " > "+ str[arr[i]] + " ");
+ 
+         
+                 document.write(str[arr[i]] + "<br>");
+ 
+         }
+ 
+ </script>

@@ -1,0 +1,116 @@
+<script>
+    /*
+        1. if만 있을때 : 조건(표현식)에 대해 참인 경우에만 출력하도록 제어
+        if( 조건, 표현식 ){
+            실행문;
+        }
+
+        2. if, else 있을때 조건(표현식)에 대해 참인 경우와 거짓인 경우에 실행문이 실행되도록 제어
+
+        if( 조건, 표현식 ){
+            실행문;
+        }else
+
+        3. if, else if, else 있을때
+        조건1(표현식)에 대해 참인 경우와 조건2(표현식)에 대한 참인 경우와
+        모든 조건이 거짓인 경우에 실행문이 실행되도록 제어
+
+        if( 조건, 표현식 ){
+            실행문;
+        }else if( ){    // elif : python 특
+            실행문;
+        }else{
+            실행문;
+        }
+
+        4. switch : 제어문 특정조건에 맞는 값에 대해서 제어문 실행
+                    조건, 표현식이 "값"으로 구분, break 라는 키워드로 케이스를 제어
+                    default : 모든 케이스가 아닐때 사용, 필수는 아님
+                    * if문처럼 작성된 순서가 중요하지 않습니다. break; 가 중요
+        switch ( 조건, 표현식 ) {
+        case value:
+            
+            break;
+
+        default:
+            break;
+        }
+
+        * 논란의 여지가 있는 switch
+        switch(true){
+            case 범위 :
+
+                break;
+            default :
+
+                break;
+        }
+        */
+    let age=19;
+    // switch(true) : 쓰냐 마냐를 같은 개발자끼리 규칙으로 정합니다.
+    switch(true){
+            case age<13 :
+                console.log(age+" : age < 13");
+                break;
+            case age>=13 && age<20 :
+                console.log(age+" : age>=13 && age<20");
+                break;
+            case age>=20 && age<50 :
+                console.log(age+" :age>=20 && age<50");
+                break;
+            default :
+                console.log("done");
+                break;
+        }
+
+    // if else 를 조금더 간결하게 작성하는 방법
+    // 삼항 연산자 : if else를 한줄로 변경하는 제어문
+    /*
+        if( 조건, 표현식 ){
+            실행문1;
+        }else{
+            실행문2;
+        }
+
+        */
+       let b2=0;
+       if(5>4){
+           b2=50;
+       }else{
+           b2=40;
+       }
+
+    // 삼항연산자 : 반환값을 위한 변수 = (조건,표현식) ? true에대한반환문 : false에대한반환문 ;
+
+    let b1=0;
+    bl = (50>40) ? 50 : 40;
+    // 참일때는 b1=50; // 거짓일때는 b1=40;
+
+    let x=3, y=5;
+    let result = (x>y) ? x:y;
+    // x>y에 대한 결과로 x가 크면 첫번째 반환값, y가 크면 두번째 한봔값을
+    // result라는 변수에 저장
+
+    // 변수=(조건) ? 참일경우 저장할값 : 거짓일경우 저장할값 ;
+
+    // 삼항연습
+    // 절대값
+    let n1 = 50;
+    let n2 = 100;
+    var diff=0;
+    diff= ( n1 > n2 ) ? n1-n2 : n2-n1 ;
+    console.log(diff)
+    // 두 수의 거리에 대해서 절대값으로 표현
+    let n3 = 17;
+    let n4 = 10;
+    var diff=0;
+    diff= ( n3 > n4 ) ? n3-n4 : n4-n3;
+    console.log(diff)
+
+    if(n1 > n2){
+        diff=n1-n2;
+    }else{
+        diff=n2-n1;
+    }
+    console.log(diff)
+</script>

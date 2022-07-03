@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color1{
+            color: red;
+        }
+        .color2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p_click">안녕하세요</p>
+    
+</body>
+<script>
+    /*
+        click       : 마우스 클릭 시
+        mouseover   : 마우스 커서가 해당 태그(요소)로 올라왔을때
+        mouseout    : 마우스 커서가 해당 태그(요소)로 떠났을때
+        mousedonw   : 마우스를 눌렀을때
+        mouseup     : 마우스를 때었을때
+
+        onclick > on이벤트명 작성하면 태그안에서도 작성가능하고, 자바스크립트에서도 사용가능합니다.
+        on 이 없을때는 <script> 태그 내에서 작성해야하며 addEventListener으로 진행
+        
+    */
+
+        let p = document.getElementById("p_click");
+        p.addEventListener("click", m_click);
+        p.addEventListener("mouseover", m_over);
+        p.addEventListener("mouseout",m_out);
+
+        function m_click(){
+            p.innerHTML = "클릭되었습니다."
+            // alert("확인");
+            p.classList.remove("color1","color2");
+        }
+s
+        function m_over(){
+            // setAttribute("속성명","속성값") : 태그의 속성을 만드는 메소드
+            p.setAttribute("class", "color1");
+        }
+        function m_out(){
+            p.setAttribute("class", "color2");
+        }
+</script>
+</html>

@@ -1,0 +1,78 @@
+<script>
+
+
+    // for(let i = 0; i<10; i++){
+    //     document.write(i+"번째 실행중<br>")
+    // }
+    // document.write("<br><hr><br>")
+
+    // // 1. 1~10
+    // for(let i2=1; i2<11; i2++){
+    //     document.write(i2+"<br>")
+    // }
+    // document.write("<br><hr><br>")
+
+    // // 2. 20~30
+    // for(let i3=20; i3<31; i3++){
+    //     document.write(i3+"<br>")
+    // }
+    // document.write("<br><hr><br>")
+
+    // // 3. 1~100
+    // for(let i4=1; i4<101; i4++){
+    //     document.write(i4+"<br>")
+    // }
+    // document.write("<br><hr><br>")
+
+    // // 4. 10~1
+    // for(let i5=10; i5>0; i5--){
+    //     document.write(i5+"<br>")
+    // }
+    // document.write("<br><hr><br>")
+
+    // // 5. 2 4 6 8 10
+    // for(let i6=2; i6<11; i6+=2){
+    //     document.write(i6+"<br>")
+    // }
+    // document.write("<br><hr><br>")
+
+    // // 6. 10 8 6 4 2
+    // for(let i7=10; i7>0; i7-=2){
+    //     document.write(i7+"<br>")
+    // }
+    // document.write("<br><hr><br>")
+
+    // // 7. 1~10 진행되는데 :
+    // // 1 : 홀수 입니다
+    // // 2 : 짝수 입니다
+    // for(let i8=1; i8<10; i8++){
+    //     if(i8%2==0){
+    //         document.write(i8+": 짝수입니다.<br>")
+    //     }else{
+    //         document.write(i8+": 홀수입니다.")
+    //     }
+    // }
+
+
+    let count = 0;
+    for(let i=1; i<=100; i+=7){
+        count++;
+        count = count+=i
+    }
+    console.log(count)
+
+
+    // 1 ~100 홀수와 짝수의 갯수
+
+    let even = 0;
+    let odd = 0;
+    for(let i=1; i<=100; i++){
+        if(i%2==0){
+            even++;
+        }else{
+            odd++;
+        }
+    }
+    console.log("짝수 :"+even+"개 "+"홀수 :"+odd+"개")
+
+</script>

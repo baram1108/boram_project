@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        tr, td{
+            margin: 0;
+            font-size: 45px;
+            color: white;
+            border-radius: 30px;
+            background-color: lightseagreen;
+            width: 60px;
+            text-align: center;
+        }
+
+        input{
+            border: 0;
+            width: 250px;
+            text-align: right;
+            font-size: 28px;
+        }
+        #result{
+            font-size: 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="input"><br>
+        <input type="text" id="result">
+        <table>
+            <tr>
+                <td onclick="clear()" colspan="2" style="background-color: lightsalmon; color:darkslategrey;">ac</td>
+                <td onclick="add('%')">%</td>
+                <td onclick="add('/')">/</td>
+            </tr>
+            <tr>
+                <td onclick="add('7')">7</td>
+                <td onclick="add('8')">8</td>
+                <td onclick="add('9')">9</td>
+                <td onclick="add('x')" >x</td>
+            </tr>
+            <tr>
+                <td onclick="add('4')">4</td>
+                <td onclick="add('5')">5</td>
+                <td onclick="add('6')">6</td>
+                <td onclick="add('-')">-</td>
+            </tr>
+            <tr>
+                <td onclick="add('1')">1</td>
+                <td onclick="add('2')">2</td>
+                <td onclick="add('3')">3</td>
+                <td onclick="add('+')">+</td>
+            </tr>
+            <tr>
+                <td onclick="add('0')"colspan="2">0</td>
+                <td onclick="res()"colspan="2"style="background-color: lightsalmon; color:darkslategrey;">=</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    let input = document.getElementById("input");
+    let result =document.getElementById("result")
+      
+    function add(str){
+        input.value += str;
+    }
+    
+    function res(){
+        result.value = eval(input.value)
+    }
+
+    function clear(){
+        input.value = "";
+        result.value = "";
+    }
+</script>
+</html>

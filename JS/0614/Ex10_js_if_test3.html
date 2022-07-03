@@ -1,0 +1,51 @@
+<script>
+    // math.radom() : 난수를 생성해주는 함수
+    // 0 ~ 1 사이에 있는 랜덤한 소숫점 숫자 0.00000001 ~ 0.99999999
+    // 1 ~ 100 까지
+
+
+    let random1 = Math.floor((Math.random()*100)+1);
+    let random2 = Math.floor((Math.random()*100)+1);
+    let random3 = Math.floor((Math.random()*100)+1);
+
+    document.write("랜덤한 숫자 1 : "+random1+"<br>")
+    document.write("랜덤한 숫자 2 : "+random2+"<br>")
+    document.write("랜덤한 숫자 3 : "+random3+"<br>")
+
+    let max;
+
+    // 변수 갯수 상관X
+    // 최대값 출력
+    // 비교 > 큰 숫자를 어떤 공간에 대입(저장)
+    // 저장된 변수와 비교 > 큰 숫자를 어떤 공간에 대입
+
+    if(random1 >= random2){
+        if(random1 >= random3){
+            max = random1
+        }else{
+            max = random3
+        }
+    }else{
+        if(random2 >= random3){
+            max = random2
+        }else{
+            max = random3
+        }
+    }
+    document.write("1. 최대값 : "+ max);
+
+
+    // = : 값을 대입
+    max = random1;
+
+    if(max<=random2){
+        max = random2;
+    }
+    if(max<=random3){
+        max=random3;
+    }
+    document.write("1. 최대값 : "+ max);
+
+
+
+</script>

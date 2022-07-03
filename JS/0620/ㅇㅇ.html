@@ -1,0 +1,48 @@
+<script>
+let lottoNum = [];
+let myNumArr = [];
+let count = 0;
+
+// 로또 랜덤번호 생성 및 중복제거
+for(let i=0;i<6;i++){
+    lottoNum[i]=Math.floor((Math.random()*45)+1);
+    for(let j=0;j<i;j++){
+        if(lottoNum[j]==lottoNum[i]){
+            i--;
+        }
+    }
+}
+// 로또 랜덤번호정렬
+for(let i=0;i<lottoNum.length;i++){
+    let tmp=0;
+    for(let j=0;j<lottoNum.length-1;j++){
+        if(lottoNum[j]>lottoNum[j+1]){
+            tmp = lottoNum[j];
+            lottoNum[j]=lottoNum[j+1];
+            lottoNum[j+1]=tmp;
+        }
+    }
+}
+// 사용자 번호 입력 및 중복제거
+for(let i=0;i<6;i++){
+    myNumArr[i] = Number(prompt((i+1)+"번째 번호를 입력하세요"));
+    for(let j=0;j<i;j++){
+        if(myNumArr[j]==myNumArr[i]){
+            i--;
+        }
+    }
+}
+// 맞춘 갯수 카운트
+for(let i=0;i<6;i++){
+    for(let j=0;j<6;j++){
+        if(lottoNum[i] == myNumArr[j]){
+            count++;
+        }
+    }
+}
+// 출력
+console.log("맞춘갯수 : "+count);
+console.log("컴퓨터랜덤숫자 : "+lottoNum);
+console.log("사용자입력숫자 : "+myNumArr.sort(function(a,b){return a-b;}));
+
+</script>

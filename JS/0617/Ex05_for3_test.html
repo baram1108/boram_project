@@ -1,0 +1,96 @@
+<script>
+
+    /*
+
+        1
+        12
+        123
+        1234
+        12345
+        1234
+        123
+        12
+        1
+
+    */
+    let num = 3;
+    for(let i = 1 ; i < 10 ; i++){
+        document.write(i + "&nbsp;&nbsp;");
+        if( i <=5 ){
+            for(let j=1; j<=i; j++){
+                document.write(j);
+            }
+            document.write("<br>");
+        }else{
+            // i = 6 : 4번 반복 : 1 2 3 4   >> 4 3 2 1
+            // i = 7 : 3번 반복 : 1 2 3     >> 4 3 2
+            // i = 8 : 2번 반복 : 1 2       >> 4 3
+            // i = 9 : 1번 반복 : 1         >> 4
+            // for ( let j = 4; j > i-6 ; j-- ){
+            //     document.write(5-j);
+            // }
+
+            for ( let j = 4; j > i-6 ; j-- ){
+            // i-j : 6-4 ~ 6-1
+                document.write( (i-j)-4+num) 
+            }
+            num--;
+            document.write("<br>");
+        }
+        
+
+    }
+    document.write("<hr>");
+
+    for(let i=0; i<9; i++){
+        if(i<=4){
+            for(let j=0; j<=i; j++){
+                document.write(j+1);
+            }
+            document.write("<br>");
+        }else{
+            for(let j=1; j<=9-i; j++){
+                document.write(j)
+            }
+            document.write("<br>");
+        }
+    }
+    document.write("<hr>");
+
+
+    for( let i = 1; i <10; i++){
+        if( i <=5 ){
+            for( let j= 1; j <= i; j++){
+                document.write(j);
+            }
+            document.write("<br>");
+        }else{
+            let l = 0;
+            for( let j= 9; j>=i; j--){
+                l++;
+                document.write(l);
+            }   document.write("<br>");
+        }
+    }
+    document.write("<hr>");
+
+    let a = 0;
+    for(let i = 1; i<=9; i++){
+        if(i<=5){
+            for(let j = 1; j <= i; j++){
+                document.write(j);
+            }
+            document.write("<br>"); 
+        }else{
+            for(let j = 4; j >= i-5 ; j--){
+                a++;
+                document.write(a);
+            }
+            a = 0;
+            document.write("<br>");
+
+        }
+
+    }
+
+</script>

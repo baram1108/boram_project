@@ -1,0 +1,47 @@
+<!-- Ex09_js_if_two2.html -->
+<script>
+
+    // M W 
+    let gender = "W"; 
+    let age = 20; 
+
+    // 1. W 이나 M 통해서 남자, 여자, 성별없음
+    // 2. 나이 : 20 이상 성인 / 19 이하 학생
+
+    // M, 15
+    // 결과 : 남성입니다.
+    //        학생입니다.
+
+    // W, 20
+    // 결과 : 여성입니다.
+    //        성인입니다.
+
+
+    if(gender == "W"){
+        console.log("여성입니다.")
+
+        if ( age > 19){
+            console.log("성인입니다.")
+        }else {
+            console.log("학생입니다.")
+        }
+
+    }else if ( gender == "M"){
+        console.log("여성입니다.")
+        
+        if ( age > 19){
+            console.log("성인입니다.")
+        }else {
+            console.log("학생입니다.")
+        }
+    }else{
+        console.log("성별없습니다.")
+        
+        if ( age > 19){
+            console.log("성인입니다.")
+        }else {
+            console.log("학생입니다.")
+        }
+
+    }
+</script>

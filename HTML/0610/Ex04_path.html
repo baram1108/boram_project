@@ -1,0 +1,71 @@
+<!--
+    경로 : 코딩 상에서는 마우스로 경로를 선택할 수 없다.
+           하나의 문자로 내가 원하는 파일을 작성
+
+           현재 작업 공간(실행중인 파일)에서 다른 파일을 참고하거나 불러올때
+           지정하는 경로 선언 방식
+           * 컴퓨터를 사용하는 필수요건
+           Windows : GUI 환경 :
+            Graphical User Interface : 마우스로 제어
+           명령프롬프트, Linux, Dos : CLI 환경
+            Command Line Interface : 명령어를 통해 제어(키보드)
+
+           img 태그나 style url("") href 태그들
+           :마우스 제어 불가능 , 명령어로 제어
+
+           경로를 작성하여 필요한 파일을 호출하여 제어
+
+           호출 방법
+           1. 절대경로
+            - 항상 최정상폴더에서 출발하는 경로
+
+           2. 상대경로
+            - 내 위치에서부터 출발하는 경로
+
+           ex) Code 폴더 : 최정상 폴더라고 한다면 
+            code 폴더 밑에 HTML 폴더 밑에 0610 폴더 밑에 Ex01_yesterday.html 파일이 있음
+
+            상대경로 : Ex04_path 파일과 Ex01_yesterday vkdlfdms 0610폴더에 같이 존재
+                      다른 폴더로 이동할 필요가 없기때문에 바로 선택 가능
+
+        절대경로 : code/HTML/0603/Ex03_css_position.html
+                 > c:/Desktop/Code/HTML/...
+        상대경로 : 0610 > HTML 폴더로 이동 > 0603/Ex03_css_position.html
+                 > ../0603/Ex03_css_position.html
+
+        경로를 표현할때 사용하는 문자
+        / : 2가지 역할 : 1. 경로간의 구분자,
+                            이름과 이름 사이에 구분
+                            (현재폴더와 다음폴더, 현재폴더와 현재파일)
+                            * 구분자 : / , // , ＼
+                            > img/src/java/1.jpg
+                            현재폴더 안에 img 폴더가 있고
+                            img 안에 src 폴더가 있고
+                            src 안에 java 폴더가 있고
+                            java 안에 1.jpg 라는 사진 검색
+
+                        2. 경로작성시 맨앞에 작성된다면 "루트"라는 의미를 가짐(최상위폴더)
+                            루트(/) : 최상의폴더 의미, 절대경로를 설정할때
+                            > /img/src/java/1.jpg
+                            현재폴더 안에 img 폴더가 있고
+                            img 안에 src 폴더가 있고
+                            src 안에 java 폴더가 있고
+                            java 안에 1.jpg 라는 사진 검색
+
+        . : 2가지 역할 : 1. . : 현재폴더라는 의미
+                        2. .. : 상위폴더라는 의미
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <!--상대경로-->
+            <img src="../0603/img/11st.png" >
+
+        <!--절대경로-->
+            <img src="C:/Users/human/Desktop/code/HTML/0603/img/kakao.png" >
+        
+    </body>
+</html>

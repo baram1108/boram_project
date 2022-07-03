@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form name="frm">
+        <label>숫자를 입력하세요
+            <input type="text" name="num" size="3" value="1"/>
+            <input type="text" name="num" size="3" value="2"/>
+            <input type="text" name="num" size="3" value="3"/>
+            <input type="text" name="num" size="3" value="4"/>
+            <input type="text" name="num" size="3" value="5"/>
+        </label>
+        <input type="button" value="총합" onclick="javascript:testFunc('sum')"/>
+        <input type="button" value="제곱" onclick="javascript:testFunc('square')"/>
+    </form>
+</body>
+
+    <script>
+        function testFunc(arg){
+            let date = document.frm.num; // 작성한 input태그를 선택해서 저장
+            
+
+            if(arg =='sum'){
+                arrprocess(date, sum)
+                alert("합계 : "+sumResult);
+            }else{
+                arrprocess(date, square);
+                alert("제곱 : "+squareResult);
+            }
+        }
+
+        function arrprocess(date, funcName){
+            // 분해
+            for(key = 0; key < date.length; key++){
+                funcName(date[key].value) // 고차함수 : 함수의 이름을 인수(파라미터)로 사용
+            }
+        }
+
+        let sumResult =0;
+        function sum(date){
+            // alert("sum함수입니다");
+            // + 의 경우는 숫자숫자일때만 더해주고 그외에는 문자열합지가 진행됨
+            sumResult += parseInt(date);
+        }
+        
+        let squareResult =[];
+        function square(date){
+            // alert("square함수입니다");
+            // *인 경우는 순자로만 표횐됨 문자인경우 자동 형변환 
+            squareResult.push(date*date);
+        }
+
+    </script>
+</html>

@@ -1,0 +1,202 @@
+<!--
+    Ex04_for2_test.html
+-->
+
+<script>
+
+    // 1 1
+    // 2 12
+    // 3 123
+    // 4 1234
+    // 5 12345
+
+    for( let i = 1; i <6 ; i++){
+        // 5번반복사용되는 코드
+        document.write(i);
+        
+        // 5번 반복사용되는 코드
+        for (let j=1; j <=i; j++ ) {
+            // 5번 반복하는 코드
+            document.write(j)     // 25번반복되는 코드
+        }
+        // 5번반복사용되는 코드
+        document.write("<br>");
+    }  
+    document.write("<hr>");
+    // **
+    // ****
+    // ******
+    // ********
+    // **********
+
+    for( let i = 1; i < 6; i++){
+        for( let j=1 ; j <= i; j++){
+            document.write("**")
+        }
+        document.write("<br>");
+    }
+    document.write("<hr>");
+
+    for( let i = 1; i < 6; i++){
+        for( let j=1 ; j <= i*2; j++){
+            document.write("*")
+        }
+        document.write("<br>");
+    }
+    document.write("<hr>");
+
+    // 54321
+    // 5432
+    // 543
+    // 54
+    // 5
+    for(let i = 0; i < 5 ; i++){
+        // 5번씩 진행하는 반복문을 5,4,3,2,1 번으로 변경
+        for( let j = 5; j > i ; j--){
+            document.write(j);
+        }
+        document.write("<br>");
+    }
+    document.write("<hr>");
+    for(let i = 1; i <= 5; i++){
+        document.write('5');
+        for(let j = 4; i <= j; j--){
+            document.write(j);
+        }
+        document.write("<br>");
+    }
+    document.write("<hr>");
+
+    
+
+    // 54321
+    // 4321
+    // 321
+    // 21
+    // 1
+    for( let i = 0; i < 5; i++){
+        for( let j=5-i ; j > 0; j--){
+            document.write(j)
+        }
+        document.write("<br>");
+    }
+    document.write("<hr>");
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 5; j >i; j--){
+            document.write(j-i)
+        }
+        document.write("<br>")
+    }
+    document.write("<hr>")
+
+    for(let i=5; i>0; i--){
+        for(let j=i; j>0; j--){
+            document.write(j);
+        }
+        document.write("<br>");
+    }
+    document.write("<hr>");
+
+
+
+
+    for( let i = 1; i < 6; i++){
+        for( let j=1 ; j <= i; j++){
+            document.write("*")
+        }
+        document.write("<br>");
+    }
+    for(let i=5; i>0; i--){
+        for(let j=i; j>0; j--){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<hr>");
+    /*
+       0 *
+       1 **
+       2 ***
+       3 ****
+       4 *****
+       5 ****
+       6 ***
+       7 **
+       8 *
+    */
+
+
+    for( let i = 0; i < 9 ; i++){
+        document.write(i);
+        if ( i <= 4){
+            for( let j = 0 ; j <= i ; j++){
+                // i = 0 : 1
+                // i = 1 : 2
+                // i = 2 : 3
+                // i = 3 : 4
+                // i = 4 : 5
+                document.write("*");
+            }
+            document.write("<br>");
+        }else{
+            // 
+            for( let j = 8; j >= i ; j-- ){
+                // i = 5 : 4 : j : 8 , 7 , 6 , 5
+                // i = 6 : 3 : j : 8 , 7 , 6
+                // i = 7 : 2 : j : 8 , 7
+                // i = 8 : 1 : j : 8
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+    }
+
+    /*
+        반복내에서 사용하는 변수, 사용하기위해 만들어야할 변수
+        변하는 수들을 이용한 반복 횟수 설정연습
+    
+    */
+  
+
+   
+
+
+	// 0*****
+	// 1****
+	// 2***
+	// 3** 
+	// 4*
+	// 5**
+	// 6***
+	// 7****
+	// 8*****
+
+    document.write("<hr>");
+
+    for(let i=0; i < 9 ; i++){
+        document.write(i);
+        if ( i < 5 ) {
+            for(let j=5; j > i;j--){
+                // i = 0 ; j = 5  j > 0 
+                // i = 1 ; j = 5  j > 1 
+                document.write("*");
+            }
+            document.write("<br>");
+        }else{
+
+            for(let j = 0; j < i-3 ; j++){
+                // i = 5 ; 2번 실행 j = 0 1 
+                // i = 6 ; 3번 실행 j = 0 1 2
+                // i = 7 ; 4번 실행 j = 0 1 2 3
+                // i = 8 ; 5번 실행 j = 0 1 2 3 4
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+
+
+
+</script>

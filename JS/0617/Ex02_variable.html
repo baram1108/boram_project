@@ -1,0 +1,61 @@
+<script>
+    //  변수 : javascript에서 쓰는 데이터가 저장되어 있는 값
+    //  이름이 겹치거나, 다른곳에서 써서 데이터가 바뀐다거나
+    //  변수들의 사용범위, 유효범위
+    //  변수의 선언된 위치에 따라 범위 결정
+    
+    // <script>에 작성되는 변수 : 전역 변수, 어디서든 쓸 수 있는 변수 , 공통적으로 변경
+    let num =1;
+    console.log("num : "+num);
+
+    // 변수 선언전에 실행
+    // >>Cannot access 'num2' before initialization
+    // 초기화(선언)하기 전에 사용할 수 없습니다.
+    // 변수를 최상단에 작성하는 것이 규칙
+    // console.log("out_num: "+num2);
+
+    if(true){
+        console.log("if_num : "+num);
+        let a = 55;
+        console.log("if_a:"+a);
+    }
+    for(let i=1;i==1;i++){
+        console.log("for_num: "+num);
+        console.log("for_i:"+i);
+    }
+    
+    console.log("out_num: "+num);
+    
+    // 변수 선언 및 초기화 > 변수생성이 필요할 경우 최상단에 작성하는 것이 좋음
+    let num2 =99;
+    console.log("out_num: "+num2);
+
+
+    // 제어문,함수(*)내에서 선언된  변수 : 지역변수
+    // 제어문, 함수가 실행될때만 유효, 종료가 되면 사라지는 변수
+    // * { } : 코드블럭 : 블럭으로 유효범위가 지정된다
+    // console.log("out_for_i:"+i); // i is not defined
+    // console.log("out_if_a:"+a); // a is not defined
+
+    // 전역변수 : 모든 곳에서 쓸 수 있음
+    // 지역번수 : 제어문, 함수내에서 사용( { }중괄호를 기준으로 사용 )
+
+    // 지역변수를 비어있는 전역변수에게 대입
+    let test1; // undefined
+    if(true){
+        console.log(test1); // Cannot access 'test1' before initialization
+        let test1 = 100;
+        // {} 중괄호 안에서 전역변수와 지역변수는 같은 이름으로 변수 선언 가능
+        // 그럴때 컴퓨터는 전역변수와 지역변수를 구분할 수 없기때문에
+        // 지역변수로 인식 >> 에러발생
+
+        console.log(test1);
+        
+        // let test2 = 100;
+        // console.log(test2)
+
+        // // 지역변수를 비어있는 전역변수에게 대입
+        // test1 = test2;
+    }
+    console.log(test1); // 100이 나왔으면 좋겠다
+</script>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #form{
+            width: 800px;
+            height: 800px;
+            margin: auto;
+            border: 1px solid red;
+            padding: 15px;
+        }
+        header{
+            background-color: greenyellow;
+            border: 1px solid palegreen;
+            padding: 20px 15px;
+            margin-bottom: 15px;
+        }
+        .menu{
+            color: green;
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+        section{
+            display: inline-block;
+            border: 1px solid black;
+            padding: 20px 15px;
+            margin-bottom: 15px;
+        }
+        span{
+            font-size: 14px;
+        }
+        #sec1{
+            display: inline-block;
+            width: 530px;
+            font-size: 14px;
+            background-color: yellow;
+            margin-left: 10px;
+            
+        }
+        #sec2{
+            position: relative;
+            left:10px;
+            text-align: center;
+            font-size: 14px;
+            width: 500px;
+            height: 200px;
+        }
+        .table{
+            background-color: aquamarine;
+            border-bottom: 1px solid aqua;
+        }
+        #sidebar{
+            /* display: inline-block; */
+            border: 1px solid black;
+            padding: 20px 10px;
+            width: 200px;
+            float: right;
+        }
+        .clear{
+            clear: both;
+        }
+        footer{
+            border: 1px solid black;
+            padding: 20px 15px 30px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">    
+        <header>
+            <h1>ONLINE SSAFY</h1>
+            <a href="#" class="menu"><span>메뉴1</span></a>
+            <a href="#"class="menu"><span>메뉴2</span></a>
+            <a href="#"class="menu"><span>메뉴3</span></a>
+            <a href="#"class="menu"><span>메뉴4</span></a>
+        </header>
+        <section>
+            <h4>기사1</h4>
+            <span id="sec1">재산권의 행사는 공공복리에 적합하도록 하여야한다. 정부는 회계영도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.<br/>
+            대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일 전에 후임자를 선거한다. 제2항과 제3항에 처분에 대하여는 법원에 제소할 수 없다. 언론,출판에 대한 허가나 검열과 집회,결사에 대한 허가는 인정되지 아니한다.
+            </span>
+            <h4>기사2</h4>
+                <table id="sec2">
+                    <tr style="background-color:blue; color: white;">
+                        <td>번호</td>
+                        <td>제목</td>
+                        <td>작성자</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>이 헌법시행 당시의 대법원장과 대법원판사가...</td>
+                        <td>강감찬</td>
+                    </tr>
+                    <tr class="table">
+                        <td>2</td>
+                        <td>대한민국은 국제평화의 유지...</td>
+                        <td>장영실</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>정당은 법률이 정하는 바에...</td>
+                        <td>안중근</td>
+                    </tr>
+                    <tr class="table">
+                        <td>4</td>
+                        <td>공공필요에 의한 재산권의 수용...</td>
+                        <td>김두한</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>국회의원은 그 지위를 남용하여 국가...</td>
+                        <td>계벽</td>
+                    </tr>
+                    <tr class="table">
+                        <td>6</td>
+                        <td>정기회의 회기는 100일을, 초과할 수 없다...</td>
+                        <td>최무선</td>
+                    </tr>
+                </table>
+        </section>
+        <div id="sidebar">
+            <h3>SIDEBAR</h3>
+            <span>
+            모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다
+            </span>
+        </div>
+        <div class="clear"></div>
+        <footer>
+            <h2>Footer</h2>
+            <span>이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다.</span>
+        </footer>
+    </div>
+    </body>
+</html>

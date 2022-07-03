@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clickbtn()">이벤트버튼</button>
+
+    <a id="link" href="http://www.naver.com">네이버링크</a>
+    
+</body>
+<script>
+    function clickbtn(){
+        let link = document.getElementById("link");
+        link.href = "http://www.google.com";
+        link.innerHTML="구글링크";
+
+        window.open(link.href);
+    }
+</script>
+</html>

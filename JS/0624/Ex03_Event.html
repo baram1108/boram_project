@@ -1,0 +1,59 @@
+<script>
+    // 이벤트(사건,시점,상황)
+    // HTML 요소 안에서의 사건발생 > 사건이 발생하면 특정한 동작을 하겠다.
+    // 이벤트를 발생시키는 조건 : 키보드, 마우스, DOM, Window 등등...
+    // 마우스를 클릭할때, 누르고 있을때, 드래그하고있을때, 더블클릭했을때 등등...
+    // 키보드 누르고있을때, 눌렀다가 땠을때 ,keyup, keydown
+    // DOM Window : focus관련 이벤트
+
+    //  js : 이벤트에 대한 것을 정의 : click 이벤트가 발생하면 그에 대한 정의
+
+    // 이벤트가 발생한 대상 > 이벤트의 정의 연결
+    // 정의된 이벤트 > 특정동작을 하겠다고 연결
+    // 1. 이벤트가 발생할 대상
+    // 2. 발생할 이벤트를 정의
+    // 3. 발생할때 ! 특정 동작을 설명(코딩)
+    // p 태그를 선택해서 클릭이 되면 색상을 바꿔라, 글씨를바꿔라
+
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <script>
+        // window : 브라우저의 창객체
+        // onload : 모든 로딩이 끝난 후를 의미하는 이벤트
+        /*
+            문제 상황 !!
+            script > body(dom,문서)보다 먼저 실행
+                    > 스크립에 작성한 태그를 선택하는 변수들이 문서객체 생성보다 먼저 실행되는 문제가 발생
+                    > 태그를 못찾는 오류발생
+
+            해결방법 !
+            1. body 이후에 script 작성 >> 추천
+            2. window.onload 를 이용하여 문서가 모두 로딩 된 후 스크립트가 실행되도록 코딩
+        */
+        window.onload=function(){
+
+            let btn = document.getElementById("button");
+    
+            // addEventListener("이벤트명", "함수")
+            // btn.addEventListener("click",btnclick)
+    
+            btn.onclick = btnclick;
+    
+            function btnclick(){
+                document.getElementById("text").innerHTML = "버튼 클릭 이벤트 실행";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button id="button">눌러주세요</button>
+    <p id="text"></p>
+
+</body>
+</html>

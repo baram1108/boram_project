@@ -1,0 +1,87 @@
+<script>
+    // 게임시작
+    // 1. 랜덤 숫자 4개 컴퓨터가 배열 저장
+    // 2. 사용자 4개의 숫자를 입력
+    // 3. 반복 : 정답을 맞출때까지 or 5번의 기회 > 사용자가 입력 > 결과 > 다시 재도전 >입력 > 결과
+    // 4. strike ball out : console.log로 결과 보여주기
+
+    // strike : 입력한 숫자가 존재하고 위치도 같으면 s
+    // ball : 입력한 숫자만 존재하면 b
+    // out : 모든 입력숫자가 존재하지 않으면 o
+
+    // * 반복해야할 상황 * 반복속반복도 존재가능
+    // * 반복해야하지 않을 상황
+
+    let randomNumArr = [];
+    let userNumArr = [];
+    let strike=0;
+    let ball=0;
+    let out=0;
+
+    // 정답 생성
+    for(i=0;i<4;i++){
+        randomNumArr[i]=Math.floor(Math.random()*8);
+        for(j=0;j<i;j++){
+            if(randomNumArr[j]==randomNumArr[i]){
+                i--;
+            }
+        }
+    }
+    // console.log("정답 : " + randomNumArr)
+
+    // 정답 맞출때까지 반복
+    for(k=1;k<10;k++){
+
+        // 사용자 입력
+        for(i=0;i<4;i++){
+            userNumArr[i]=Number(prompt(k+"회입니다.\n"+(i+1)+" 번째 번호를 입력하세요."));
+            for(j=0;j<i;j++){
+            if(userNumArr[j]==userNumArr[i]){
+                alert("중복된 숫자입니다. 다시 입력해주세요.")
+                i--;
+            }
+        }
+        }
+        
+        // 스트라이크 카운트
+        for(i=0;i<4;i++){
+            if(randomNumArr[i]==userNumArr[i]){
+                strike++;
+            }
+        }
+        // 볼 카운트
+        for(i=0;i<4;i++){
+            for(j=0;j<4;j++){
+                if(randomNumArr[j]==userNumArr[i]){
+                    ball++;
+                }
+            }
+        }
+        
+        // 출력
+        console.log(k+"회 : "+userNumArr)
+        if((strike==0)&&(ball==0)){
+            console.log("out!")
+            out++;
+        }else{
+            console.log(strike+" strike!")
+            console.log((ball-strike)+" ball")
+        }
+
+        // 게임 반복 OR 종료
+        if(strike==4){
+            console.log("승리!!!")
+            break;
+        }else if(out>=3){
+            console.log("3아웃! 패배.")
+            break;
+        }else if(k==9){
+            console.log("실패")
+        }else{
+            strike = 0;
+            ball = 0;
+        }
+    }
+    alert("게임이 끝났습니다.")
+
+</script>

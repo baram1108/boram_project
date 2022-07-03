@@ -1,0 +1,35 @@
+<script>
+    let gender = "m";
+    let age = 7;
+
+    // 1. 남 / 여 / 성별없음
+    // 2. 나이 : 20이상 성인 / 19이하 학생
+
+    // 결과 : 성별입니다.
+    //        학생입니다.
+
+    if(gender=="w"){
+        console.log("여성입니다.");
+        if(age<20){
+            console.log("학생입니다.");
+        }else{
+            console.log("성인입니다.");
+        }
+    }else if(gender=="m"){
+        console.log("남성입니다.");
+        if(age<20){
+            console.log("학생입니다.");
+        }else{
+            console.log("성인입니다.");
+        }
+    }else{
+        console.log("잘못된 성별입력입니다.");
+        if(age<20){
+            console.log("학생입니다.");
+        }else{
+            console.log("성인입니다.");
+        }
+    }    
+
+
+</script>

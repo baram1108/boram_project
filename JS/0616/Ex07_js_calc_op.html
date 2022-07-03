@@ -1,0 +1,39 @@
+<script>
+
+    let n1 = Number(prompt("첫번째숫자?"));
+    let n2 = Number(prompt("두번째숫자?"));
+    let op = prompt("기호를 입력해주세요.");
+
+
+    document.write("첫번째숫자: "+n1+"<br>");
+    document.write("두번째숫자: "+n2+"<br>");
+    switch(op){
+        case "+":
+            document.write(n1+"+"+n2+"="+(n1+n2));
+            break;
+        case "-":
+            document.write(n1+"-"+n2+"="+(n1-n2));
+            break;
+        case "*":
+            document.write(n1+"x"+n2+"="+(n1*n2));
+            break;
+        case "/":
+            document.write(n1+"/"+n2+"="+(n1/n2));
+            break;
+        case "%":
+            document.write(n1+"%"+n2+"="+(n1%n2));
+            break; 
+    }
+
+    if(op =="+"){
+        document.write(n1+"+"+n2+"="+(n1+n2));
+    }else if(op =="-"){
+        document.write(n1+"-"+n2+"="+(n1-n2));
+    }else if(op =="*"){
+        document.write(n1+"*"+n2+"="+(n1*n2));
+    }else if(op =="/"){
+        document.write(n1+"/"+n2+"="+(n1/n2));
+    }else if(op =="%"){
+        document.write(n1+"%"+n2+"="+(n1%n2));
+    }
+</script>

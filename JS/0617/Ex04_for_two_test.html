@@ -1,0 +1,149 @@
+<script>
+    // 11
+    // 212
+    // 3123
+    // 41234
+    // 512345
+
+    // for(let i=1; i<6; i++){
+    //     document.write(i);
+    //     for(let j=1; j<=i; j++){
+    //     document.write(j);
+    //     }
+    //     document.write("<br>");
+    // }
+    // document.write("<hr>");
+
+    // for(let i=1;i<6;i++){
+    //     for(let j=0;j<i*2;j++)
+    //     document.write("*")
+    //     document.write("<br>");
+    // }
+    // document.write("<hr>");
+
+    // for(let i=5;i>0;i--){
+    //     for(let j=i;j>0;j--){
+    //         document.write(j);
+    //     }
+    //     document.write("<br>");
+    // }
+    // document.write("<hr>");
+
+    // for(let i=5;i>0;i--){
+    //     for(let j=0;j<i;j++){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // for(let i=1;i<6;i++){
+    //     document.write(i);
+    //     for(let j=1;j<=i;j++){
+    //         document.write(j);
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // document.write("<br><hr><br>");
+
+    // for(let i=0;i<5;i++){
+    //     for(let j=5;j>i;j--){
+    //         document.write(j-i);
+
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // document.write("<br><hr><br>");
+
+    // for(let i=0;i<5;i++){
+    //     for(let j=5-i;j>0;j--){
+    //         document.write(j);
+    //     }
+    //     document.write("<br>");
+    // }
+
+    //     for(let i=1;i<6;i++){
+    //     for(let j=0;j<i;j++)
+    //     document.write("*")
+    //     document.write("<br>");
+    // }
+    //   for(let i=5;i>0;i--){
+    //     for(let j=0;j<i;j++){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // document.write("<br><hr><br>");
+
+    // for(let i=0;i<9;i++){
+    //     document.write(i);
+    //     if(i>=4){
+    //         for(let j=0;j<=i;j++){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+            
+    //     }else{
+    //         for(let k=4;k>0;k--){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    //     }
+    // }
+
+    // for(let i=0;i<9;i++){
+    //     document.write(i);
+    //     if(i<=4){
+    //         for(let j=0;j<=i;j++){
+    //         // i= 0
+    //         // i= 1
+    //         // i= 2
+    //         // i= 3
+    //         // i= 4
+    //             document.write("*");
+    //         }
+    //         document.write("<br>");
+
+    //     }else{         
+    //         for(let j=8;j>=i;j--){
+    //         // i= 5 : 4 : j : 8,7,6,5
+    //         // i= 6 : 3 : j : 8,7,6
+    //         // i= 7 : 2 : j : 8,7
+    //         // i= 8 : 1 : j : 8
+    //             document.write("-");
+    //         }
+    //         document.write("<br>");
+    //     }    
+    // }
+
+    /*
+        반복내에서 사용하는 변수, 사용하기 위해 만들어야할 변수
+        변하는 수들을 이용한 반복 횟수 설정 연습
+    */
+
+    for(let i=0;i<9;i++){
+        document.write(i);
+        if(i>5){
+            for(let j=5;j>i;j--){
+                document.write("*");
+            }
+            document.write("<br>");
+        }else{
+            for(let j=0;j< i-3;j++){
+            // i= 5 : 2번실행 j : 0 1
+            // i= 6 : 3번실행 j : 0 1 2
+            // i= 7 : 4번실행 j : 0 1 2 3
+            // i= 8 : 5번실행 j : 0 1 2 3 4
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+
+
+
+
+
+</script>

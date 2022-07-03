@@ -1,0 +1,119 @@
+<!-- Ex08_table.html -->
+
+<!-- 여러가지 데이터를 보기좋게 정리하는 표 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        <table></table> : 테이블을 구성하기 위한 큰 범위 
+        <tr></tr> : 가로줄을 만드는 태그 ( 기본값 : 보통 글씨, 왼쪽 정렬 )
+        <td></td> : 셀을 만드는 태그  ( 기본값 : 보통 글씨, 왼쪽 정렬 )
+        * <th></th> : 표의 제목을 만드는 태그 ( 기본값 : 굵은 글씨, 가운데정렬 ) 
+                      (*td 대신 사용)
+
+        <table> 
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    -->
+
+    <table border="1"> 
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+    <hr>
+            <!-- 
+            언어        난이도  학습기간
+            HTML        하      1주
+            CSS         중      1주
+            javascript  상      2주
+
+
+        -->
+    <table border="1">
+        <tr>
+            <th>언어</th>
+            <th>난이도</th>
+            <th>학습기간</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>하</td>
+            <td>1주</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>중</td>
+            <td>1주</td>
+        </tr>
+        <tr>
+            <td>javascript</td>
+            <td>상</td>
+            <td>2주</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- 테이블 병합 연습 -->
+    <!-- colspan : 열 합치기 가로열병합
+         rowspan : 행 합차기 세로행병합
+    
+    -->
+    <table border="1">
+        <tr>
+            <td colspan="2">1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <hr>
+    <table border="1">
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+        </tr>
+    </table>
+    <hr>
+    <table border="2">
+        <tr>
+            <td>홍길동</td>
+            <td>박길동</td>
+        </tr>
+        <tr>
+            <td>맹길동</td>
+            <td>차길동</td>
+        </tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td>홍길동</td>
+            <td  rowspan="2">박길동</td>
+        </tr>
+        <tr>
+            <td>박길동</td>
+        </tr>
+        <tr>
+            <td colspan="2">맹길동차길동</td>
+        </tr>
+    </table>
+</body>
+</html>

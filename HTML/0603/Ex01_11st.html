@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+
+        div, header {
+            /*
+                margin: auto : 태그의 양옆의 마진을 똑같게 만들어주는 옵션
+                              * 주의 : 대상 태그의 넓이가 있어야한다 
+            */
+            width: max-content;
+            margin: auto;
+        }
+
+        /* 태그를 선택하는 방법 3가지 
+            태그명 / id / class + 태그내에 작성하는방법(인라인스타일)
+        */
+        /* #id{
+            width: 326px;
+            height: 46px;
+            border: 1px solid rgb(220,220,220);
+        }  
+        #password{
+            width: 326px;
+            height: 46px;
+            border: 1px solid rgb(220,220,220);
+        } */
+
+        #id, #password {
+            width: 326px; /* input 태그는 기본적으로 패딩과 보더가 있다.*/
+            height: 46px;
+            border: 1px solid rgb(220,220,220);
+        }
+        #loginBtn{
+            width: 332px;
+            height: 52px;
+            cursor: pointer;
+            background-color: #f43142;
+            border: 1px solid #f43142;
+            color: #ffffff;
+            font-size: 17px;
+            margin-bottom: 20px;
+
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .simpleLogin{
+            margin-top: 70px;
+        }
+
+        .title{
+            text-align: center;
+            font-size: 16px;
+            color: #999;
+            margin: 0px;
+        }
+
+        .logo{
+            margin-top: 90px;
+        }
+ 
+        .spanLogo{
+            width: 84px;
+            height: 84px;
+            background-size: 66px; /* 64~66px*/
+            padding: 80px 10px 0px; /*상 (좌우) 하*/
+            background-repeat: no-repeat;
+            color: #999;
+        }
+        .kakao{
+            background-image: url("img/kakao.png");
+        }
+
+        .skt{
+            background-image: url("img/skt.png");
+        }
+
+        .naver{
+            background-image: url("img/naver.png");
+        }
+
+        .mobile{
+            background-image: url("img/mobile.png");
+        }
+
+        .left_side{
+            display: inline-block;
+        }
+        .right_side{
+            display: inline-block;
+            margin-left: 27px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <img src="img/11st.png" style="width: 150px; margin-top: 60px; margin-bottom: 40px;">
+        </header>
+        <!-- 로그인 담당할 박스 -->
+        <div>
+            <section>
+                <article>
+                    <input type="text" id="id" placeholder="아이디"><br>
+                    <input type="password" id="password" placeholder="비밀번호는 6~20자"><br>
+                    <input type="button" id="loginBtn" value="로그인">
+                </article>
+            </section>
+        </div>
+        <div class="left_side">
+            <input type="checkbox" id="autoLogin">
+            <label for="autoLogin">자동로그인</label>
+        </div>
+        <div class="right_side">
+            <a href="#">아이디찾기</a> | 
+            <a href="#">비밀번호찾기</a>
+        </div>
+        <div class="simpleLogin">
+            <h2 class="title">간편로그인</h2>
+            <div class="logo">
+                <a href="#카카오"><span  class="kakao spanLogo">카카오</span></a>
+                <a href="#아이디"><span class="skt spanLogo">T아이디</span></a>
+                <a href="#네이버"><span  class="naver spanLogo">네이버</span></a>
+                <a href="#휴대폰"><span  class="mobile spanLogo">휴대폰</span></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

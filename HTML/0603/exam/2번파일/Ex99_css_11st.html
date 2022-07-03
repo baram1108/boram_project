@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>11번가 로그인</title>
+    <style type="text/css">
+        #section{
+        border: 1px solid white;
+        margin: auto;
+        width: 400px;
+        height: 700px;
+        }
+
+        #header{
+            border: 1px solid white;
+            margin: auto;
+            height: 130px;
+
+        }
+
+        #logo {
+            margin-left: 140px;
+        }
+
+        #login_box{
+            border: 1px solid white;
+            height: 160px;
+            text-align: center;
+        }
+
+        .idbox{
+            height: 50px;
+            width: 300px;
+        }
+
+        #login_submit{
+            border: 1px solid rgb(230, 53, 53);
+            height: 50px;
+            background-color: rgb(230, 53, 53);
+            height: 50px;
+            width: 310px;
+            color: white;
+            font-weight: bold;
+        }
+
+        #login2{
+            border: 1px solid white;
+            height: 40px;
+            font-size: 13px;
+        }
+
+        #l1,#l2{
+            display: inline;
+            
+        }
+
+        #l1{
+            text-align:left;
+            margin-left: 60px;
+        }
+        #l2{
+            text-align:right;
+            margin-left: 65px;
+        }
+
+        #login3{
+            border: 1px solid white;
+            height: 70px ;
+            text-align: center;
+            font-size: 15px;
+            color: gray;
+        }
+
+        #login3_img{
+            border: 1px solid white;
+            text-align: center;
+            height: 70px;
+            font-size: 14px;
+            color: gray;
+        }
+        
+      
+        #join{
+            border: 1px solid white;
+            height: 90px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        a#join2:link{
+            color: black;
+            text-decoration: none;
+
+        }
+        a#join2:visited{
+            color: black;
+            text-decoration: none;
+
+        }
+
+        #visitor{
+            text-align:center;
+        }
+
+        #visitor2{
+            border: 1px solid rgb(182, 179, 179); 
+            color : black;
+            width: 150px;
+            height: 100px;
+            padding: 10px 25px;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+
+        a#visitor2:link{
+            color: black;
+            text-decoration: none;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id=section>
+        <div id="header">
+            <img id="logo" src="img/11st.png" alt="이미지를 찾을 수 없습니다." height="130px"
+                 width="130px">
+        </div>
+       <div id="login_box">
+           
+            <input class="idbox" type="text" placeholder="아이디"><br/>
+            <input class="idbox" type="password" placeholder="비밀번호는 8자~20자"><br/>
+            <input id="login_submit" type="submit" vlaue="로그인">
+            
+       </div>
+       <div id="login2">
+           <!--덩어리를 두개로 나눔. 왼쪽정렬/오른쪽정렬-->
+           <br>
+            <div id="l1">자동로그인</div> 
+            <div id="l2">아이디찾기ㅣ비밀번호 찾기</div> 
+
+       </div>
+       <div id="login3">
+           <br><br>
+           간편 로그인
+       </div>
+       <div id="login3_img">
+           <img class="icon" src="img/kakao.png" height="50px" width="50px"> 
+           <img class="icon" src="img/skt.png" height="50px" width="50px"> 
+           <img class="icon" src="img/naver.png" height="50px" width="50px"> 
+           <img class="icon" src="img/mobile.png" height="50px" width="50px">
+           <br/>
+           &nbsp;&nbsp;카카오&nbsp;&nbsp;T아이디&nbsp;&nbsp;네이버&nbsp;&nbsp;휴대폰&nbsp;        
+        
+        </div>
+        <div id="join">
+            <br><br>
+            <a id="join2" href="https://member.11st.co.kr/register/intro" tartget="_blank">회원가입 > </a>
+        </div>
+        <div id="visitor">
+            <br><br><br/>
+            <a id="visitor2" href="#"> 비회원 주문조회 </a>
+        </div>
+
+    </div>
+</body>
+</html>

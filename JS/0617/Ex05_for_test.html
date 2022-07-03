@@ -1,0 +1,29 @@
+<script>
+let num = 3;
+for(let i= 1; i<10;i++){
+    document.write(i);
+    document.write(" ");
+    if(i<=5){
+        for(let j=1; j<=i; j++){
+            document.write(j);
+        }
+    document.write("<br>");
+    }else{
+    // i= 6 : 4 : j : 1234 >> 4321
+    // i= 7 : 3 : j : 132  >> 321
+    // i= 8 : 2 : j : 12   >> 21
+    // i= 9 : 1 : j : 1
+        // for(let j=4; j>i-6; j--){
+        //     document.write(5-j);
+        // }
+        for(let j=4; j>i-6; j--){
+        // i - j : 6-4 ~ 6-1
+            document.write((i-j)-4+num);
+        }
+        num--;
+        document.write("<br>");
+    }   
+}   
+
+
+</script>
